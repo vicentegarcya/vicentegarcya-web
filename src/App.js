@@ -7,6 +7,8 @@ const textArray = [
   "books lover"
 ];
 
+
+
 function App() {
   return (
     <div className="App">
@@ -22,13 +24,13 @@ function App() {
       </header>
       <section className="welcome">
         <div>
-          <img src={"../images/IMG_9606.jpg"} alt="" />
+          <img src={"../images/picasion.com_01257a2d2a5fb76e7b256b82f5b58dfe.gif"} alt="" />
           <div className="welcome-text">
-            <p>Hi there. I'm Vicente,</p>
+            <p>Hi there. I'm <span>  Vicente  </span></p>
             <p>
-              {
+              {/* {
                 textArray.map(el => el)
-              } 
+              }  */}
             </p>
           </div>
         </div>
