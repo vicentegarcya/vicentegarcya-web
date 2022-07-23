@@ -22,7 +22,7 @@ function App() {
           </ul>
         </nav>
       </header>
-      <section className="welcome">
+      <section className='welcome'>
         <div>
           <img src={"../images/picasion.com_01257a2d2a5fb76e7b256b82f5b58dfe.gif"} alt="" />
           <div className="welcome-text">
@@ -34,6 +34,43 @@ function App() {
             </p>
           </div>
         </div>
+      </section>
+      <section className='projects'>
+        <div>
+          <div className='projects-back'></div>
+          <h3 className='projects-title'>Work</h3>
+          <div className='projects-back'></div>
+        </div>
+        <div className='projects-content'>
+          <div className='project-div'>
+            <div className='project-text'>
+              <h3>F*ck CSS</h3>
+              <p>F*ck CSS is a web app where you can try useful tools such as Flexbox helper, Grid creator, Shadow generator and Linear Gradient maker to make your life easier as a developer. You can also create an account and save those snippets for later.</p>
+            </div>
+            <div className='project-image'>
+              <img src="" alt="" />
+            </div>
+          </div>
+          <div className='project-div'>
+            <div className='project-text'>
+              <h3>Get Lit</h3>
+              <p>Get Lit is a full stack web app where you can add, share & comment your favourite books with other bookworms by creating or using our rooms. Besides, you can check local bookshops near you.</p>
+            </div>
+            <div className='project-image'>
+              <img src="" alt="" />
+            </div>
+          </div>
+          <div className='project-div'>
+            <div className='project-text'>
+              <h3>Elon Jump</h3>
+              <p> Web browser game made with JavaScript, HTML and CSS, inspired by Doodle Jump, in which you gotta help Elon Musk to put his satellites into orbit jumping from platform to platform.</p>
+            </div>
+            <div className='project-image'>
+              <img src="" alt="" />
+            </div>
+          </div>
+        </div>
+        <div></div>
       </section>
     </div>
   );
