@@ -11,7 +11,7 @@ html, body {
 .App {
   position: relative;
   width: 100vw;
-  height: 5000px;
+  height: calc((100vh - 64px) + 1400px);
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -106,7 +106,7 @@ html, body {
 
 .projects {
   width: 100vw;
-  height: 1200px;
+  height: 1400px;
   position: relative;
 }
 
@@ -144,11 +144,11 @@ html, body {
 }
 
 .projects-back:nth-child(1) {
-  background-position-x: 805px;
+  background-position-x: right;
 }
 
 .projects-back:nth-child(3) {
-  background-position-x: 40px;
+  background-position-x: left;
 }
 
 .projects-title {
@@ -158,7 +158,7 @@ html, body {
   font-size: 45px;
   text-align: center;
   background-color: #F1FF5C;
-  width: 140px;
+  width: 240px;
   height: 64px;
   margin: 0;
 }
@@ -169,6 +169,11 @@ html, body {
   background-color: #F1FF5C;
   position: absolute;
   bottom: 0;
+  color: #393933;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .projects-content {
@@ -185,6 +190,7 @@ html, body {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  margin-top: 90px;
 }
 
 .project-div:nth-child(1) {
@@ -223,7 +229,7 @@ html, body {
   padding: 0 35px 5px 20px;
   font-size: 30px;
   background-color: #F1FF5C;
-  color: rgb(199, 199, 199);
+  color: rgb(132, 156, 43);
   cursor: pointer;
   width: 100%;
 }
@@ -231,5 +237,19 @@ html, body {
 .project-image {
   width: 30%;
   height: 275px;
-  background: #F1FF5C;
+}
+
+.project-image img {
+  width: 100%;
+  filter: grayscale(100%);
+}
+
+.projects-content > div:nth-child(1) > .project-image > img {
+  border: solid 1px #444;
+}
+
+.project-image img:hover {
+  cursor: pointer;
+  filter: grayscale(0%);
+  box-shadow: 20px 20px 0px 0px rgba(241,255,92,1) 
 }

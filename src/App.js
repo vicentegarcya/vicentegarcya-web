@@ -44,33 +44,33 @@ function App() {
         <div className='projects-content'>
           <div className='project-div'>
             <div className='project-text'>
-              <h3>F*ck CSS</h3>
+              <h3 onClick={() => window.open('https://fckcss.netlify.app/')}>F*ck CSS</h3>
               <p>F*ck CSS is a web app where you can try useful tools such as Flexbox helper, Grid creator, Shadow generator and Linear Gradient maker to make your life easier as a developer. You can also create an account and save those snippets for later.</p>
             </div>
-            <div className='project-image'>
-              <img src="" alt="" />
+            <div className='project-image' onClick={() => window.open('https://fckcss.netlify.app/')}>
+              <img src={'../images/fckcss.png'} alt="" />
             </div>
           </div>
           <div className='project-div'>
             <div className='project-text'>
-              <h3>Get Lit</h3>
+              <h3 onClick={() => window.open('https://getlit-bookclub.herokuapp.com/')}>Get Lit</h3>
               <p>Get Lit is a full stack web app where you can add, share & comment your favourite books with other bookworms by creating or using our rooms. Besides, you can check local bookshops near you.</p>
             </div>
-            <div className='project-image'>
-              <img src="" alt="" />
+            <div className='project-image' onClick={() => window.open('https://getlit-bookclub.herokuapp.com/')}>
+              <img src={'../images/getlit.png'} alt="" />
             </div>
           </div>
           <div className='project-div'>
             <div className='project-text'>
-              <h3>Elon Jump</h3>
+              <h3 onClick={() => window.open('https://vicentegarcya.github.io/elon-jump/')}>Elon Jump</h3>
               <p> Web browser game made with JavaScript, HTML and CSS, inspired by Doodle Jump, in which you gotta help Elon Musk to put his satellites into orbit jumping from platform to platform.</p>
             </div>
-            <div className='project-image'>
-              <img src="" alt="" />
+            <div className='project-image' onClick={() => window.open('https://vicentegarcya.github.io/elon-jump/')}>
+              <img src={'../images/elonjump.png'} alt="" />
             </div>
           </div>
         </div>
-        <div></div>
+        <div>Copyright © 2022 Vicente García. All rights reserved.</div>
       </section>
     </div>
   );
