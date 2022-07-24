@@ -24,6 +24,7 @@ function App() {
       </header>
       <section className='welcome'>
         <div>
+          <p className='welcome-currently-working-mobile'>I'm currently working at <span onClick={() => window.open('https://garajedeideas.com/')}>Garaje de Ideas</span> as a frontend dev, where I code solutions and solve problems for our clients.</p>
           <img src={"../images/picasion.com_01257a2d2a5fb76e7b256b82f5b58dfe.gif"} alt="" />
           <div className="welcome-text">
             <p>Hi there. I'm <span>  Vicente  </span></p>

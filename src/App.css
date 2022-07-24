@@ -3,7 +3,8 @@
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   max-width: 100%;
   overflow-x: hidden;
 }
@@ -20,6 +21,10 @@ html, body {
 
 /* WELCOME SECTION */
 
+.welcome-currently-working-mobile {
+  display: none;
+}
+
 .left-side-bar {
   width: 300px;
   height: 60px;
@@ -35,7 +40,7 @@ html, body {
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.41);
+  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.41);
   z-index: 2;
 }
 
@@ -53,7 +58,7 @@ html, body {
 }
 
 .left-side-bar img:hover {
-  box-shadow: 0px 0px 15px 6px rgba(241,255,92,1);
+  box-shadow: 0px 0px 15px 6px rgba(241, 255, 92, 1);
 }
 
 .welcome {
@@ -61,7 +66,7 @@ html, body {
   height: calc(100vh - 64px);
 }
 
-.welcome > div {
+.welcome>div {
   width: 1000px;
   height: 450px;
   display: flex;
@@ -73,7 +78,7 @@ html, body {
   transform: translate(-50%, -31%);
 }
 
-.welcome > div > img {
+.welcome>div>img {
   width: 450px;
 }
 
@@ -86,7 +91,7 @@ html, body {
   color: #393933;
 }
 
-.welcome-text > p:nth-child(1) {
+.welcome-text>p:nth-child(1) {
   font-weight: 500;
   font-size: 50px;
   margin-left: -170px;
@@ -95,7 +100,7 @@ html, body {
   padding-left: 30px;
 }
 
-.welcome-text > p:nth-child(1) > span {
+.welcome-text>p:nth-child(1)>span {
   font-weight: 600;
   font-style: italic;
   background-color: #F1FF5C;
@@ -113,9 +118,9 @@ html, body {
 .projects-back::before {
   content: "";
   position: absolute;
-  top: 0; 
+  top: 0;
   left: 0;
-  width: 100%; 
+  width: 100%;
   height: 100%;
   z-index: -1;
   background-image: url('../public/images/fondo6.png');
@@ -125,7 +130,7 @@ html, body {
   filter: opacity(8%);
 }
 
-.projects > div:nth-child(1) {
+.projects>div:nth-child(1) {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -163,7 +168,7 @@ html, body {
   margin: 0;
 }
 
-.projects > div:nth-child(3) {
+.projects>div:nth-child(3) {
   width: 100vw;
   height: 64px;
   background-color: #F1FF5C;
@@ -205,7 +210,7 @@ html, body {
   width: 70%;
 }
 
-.project-text > h3 {
+.project-text>h3 {
   font-weight: 600;
   font-style: italic;
   padding: 0 35px 5px 20px;
@@ -214,7 +219,7 @@ html, body {
   margin: 0;
 }
 
-.project-text > p {
+.project-text>p {
   background-color: #fff;
   width: 80%;
   line-height: 2;
@@ -223,7 +228,7 @@ html, body {
   margin-top: 30px;
 }
 
-.project-text > h3:hover {
+.project-text>h3:hover {
   font-weight: 600;
   font-style: italic;
   padding: 0 35px 5px 20px;
@@ -244,12 +249,131 @@ html, body {
   filter: grayscale(100%);
 }
 
-.projects-content > div:nth-child(1) > .project-image > img {
+.projects-content>div:nth-child(1)>.project-image>img {
   border: solid 1px #444;
 }
 
 .project-image img:hover {
   cursor: pointer;
   filter: grayscale(0%);
-  box-shadow: 20px 20px 0px 0px rgba(241,255,92,1) 
+  box-shadow: 20px 20px 0px 0px rgba(241, 255, 92, 1)
+}
+
+/* MOBILE VERSION */
+
+@media only screen and (max-width: 768px) {
+  /* WELCOME SECTION */
+
+  .welcome-currently-working-mobile {
+    display: block;
+    text-align: center;
+    width: 80vw;
+    margin-top: 40px;
+    line-height: 1.5;
+    letter-spacing: 0.45px;
+    font-size: 18px;
+    color:#393933;
+  }
+
+  .welcome-currently-working-mobile>span {
+    font-style: italic;
+    background-color: #F1FF5C;
+    padding: 0 5px;
+    font-weight: 600;
+  }
+
+  .left-side-bar {
+    width: 250px;
+    height: 40px;
+  }
+
+  .left-side-bar li {
+    margin-top: 15px;
+  }
+
+  .left-side-bar img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .welcome {
+    width: 100vw;
+    height: calc(100vh - 64px);
+  }
+
+  .welcome>div {
+    width: 80vw;
+    height: 650px;
+    flex-direction: column-reverse;
+    position: absolute;
+    top: 32vh;
+    left: 50%;
+    transform: translate(-50%, -31%);
+  }
+
+  .welcome>div>img {
+    width: 80vw;
+  }
+
+  .welcome-text {
+    width: 100vw;
+  }
+
+  .welcome-text>p:nth-child(1) {
+    font-size: 37px;
+    padding-left: 18px;
+    margin: 0;
+  }
+
+  /* PROJECTS SECTION */
+  .App {
+    height: calc((100vh - 64px) + 2000px);
+  }
+
+  .projects {
+    height: 2000px;
+  }
+
+  .projects-back::before {
+    background-size: 100vw 160px;
+  }
+
+  .projects>div:nth-child(3) {
+    font-size: 13px;
+  }
+
+  .project-div {
+    width: 70vw;
+    height: 500px;
+    flex-direction: column;
+    margin-top: 90px;
+  }
+
+  .project-text {
+    width: 100%;
+  }
+
+  .project-text>h3 {
+    width: 100%;
+  }
+
+  .project-text>p {
+    font-size: 14px;
+    width: 100%;
+  }
+
+  .project-image {
+    width: 80%;
+    align-self: center;
+    margin-top: 25px;
+  }
+
+  .project-image img {
+    width: 100%;
+    filter: grayscale(100%);
+  }
+
+  .projects-content>div:nth-child(1)>.project-image>img {
+    border: solid 1px #444;
+  }
 }
