@@ -109,7 +109,7 @@ img {
   }
 
   .App {
-    margin-top: 42%;
+    margin-top: 28%;
     margin-left: 10vw;
   }
 
@@ -126,8 +126,8 @@ img {
 
   .projects {
     flex-direction: column;
-    position: absolute;
-    bottom: 26vh;
+    position: initial;
+    margin-top: 100px;
   }
 
   .footer {
