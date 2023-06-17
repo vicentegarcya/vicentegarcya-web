@@ -6,7 +6,7 @@
   font-size: 340px;
   filter: opacity(0.05);
   position: fixed;
-  top: 30px;
+  bottom: -15vw;
 }
 
 .Bitacora > a {
@@ -17,6 +17,7 @@
 
 .posts {
   margin-left: 60px;
+  margin-top: -5vw;
 }
 
 .post {
@@ -25,6 +26,7 @@
   flex-direction: row;
   text-decoration: underline;
   width: fit-content;
+  position: relative;
 }
 
 .post:hover {
