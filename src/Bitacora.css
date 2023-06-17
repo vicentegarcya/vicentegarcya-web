@@ -1,0 +1,58 @@
+.Bitacora {
+  margin-top: -20px;
+}
+
+.Bitacora .title {
+  font-size: 340px;
+  filter: opacity(0.05);
+  position: fixed;
+  top: 30px;
+}
+
+.Bitacora > a {
+  position: fixed;
+  bottom: 30px;
+  left: 40px;
+}
+
+.posts {
+  margin-left: 60px;
+}
+
+.post {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  text-decoration: underline;
+  width: fit-content;
+}
+
+.post:hover {
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.post > p {
+  margin-right: 8px;
+  font-size: 25px;
+}
+
+.post img {
+  width: 20px;
+  margin-top: 3px;
+}
+
+@media only screen and (max-width: 768px) {
+  .Bitacora {
+    overflow-x: hidden;
+  }
+
+  .Bitacora .title {
+    font-size: 150px;
+    top: 300px;
+  }
+
+  .posts {
+    margin-left: 20px;
+  }
+}

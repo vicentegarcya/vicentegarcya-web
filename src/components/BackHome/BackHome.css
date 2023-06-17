@@ -1,0 +1,29 @@
+.BackHome {
+  position: fixed;
+  bottom: 30px;
+  left: 40px;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+}
+
+.BackHome {
+  font-size: 18px;
+}
+
+.BackHome:hover {
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.BackHome img {
+  transform: rotate(-180deg);
+  margin-right: 8px;
+}
+
+@media only screen and (max-width: 768px) {
+  .BackHome {
+    bottom: 3dvh;
+    left: 30px;
+  }
+}

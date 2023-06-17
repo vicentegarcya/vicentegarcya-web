@@ -1,54 +1,17 @@
 import "./App.css";
-import arrowLink from "../src/images/up-right-arrow.png";
+import { Routes, Route } from "react-router-dom";
+import Home from "./Home";
+import Bitacora from "./Bitacora";
+import Post1 from './posts/Post1';
 
 function App() {
   return (
     <div className="App">
-      <section className="contact">
-        <p>
-          I'm a sensitive web developer & designer creating deep and emotional
-          experiences.
-        </p>
-        <a href="mailto:vicentegarciaayllon@gmail.com">click here</a>
-      </section>
-      <section className="projects">
-        <div className="project">
-          <p
-            onClick={() =>
-              window.open("https://www.labellezadelaoscuridad.com/")
-            }
-          >
-            project [01]
-          </p>
-          <img alt="arrow" src={arrowLink}></img>
-        </div>
-        <div className="project">
-          <p onClick={() => window.open("https://fckcss.netlify.app/")}>
-            project [02]
-          </p>
-          <img alt="arrow" src={arrowLink}></img>
-        </div>
-        <div className="project">
-          <p
-            onClick={() =>
-              window.open("https://vicentegarcya.github.io/elon-jump/")
-            }
-          >
-            project [03]
-          </p>
-          <img alt="arrow" src={arrowLink}></img>
-        </div>
-      </section>
-      <section className="footer">
-        <p
-          onClick={() =>
-            window.open("https://www.instagram.com/vicentegarcya/")
-          }
-        >
-          INSTAGRAM
-        </p>
-        <a href="mailto:vicentegarciaayllon@gmail.com">CONTACT</a>
-      </section>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/bitacora" element={<Bitacora />} />
+          <Route path="/bitacora/1" element={<Post1 />} />
+        </Routes>
     </div>
   );
 }

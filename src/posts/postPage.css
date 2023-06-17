@@ -1,0 +1,54 @@
+/* POST PAGE */
+.postPage .title {
+  font-size: 140px;
+  filter: opacity(0.05);
+  position: fixed;
+  top: 10px;
+}
+
+.postPage .content {
+  width: 55%;
+  margin-top: 340px;
+  margin-left: 8vw;
+  margin-bottom: 340px;
+}
+
+.postPage .content p {
+  line-height: 1.5;
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 40px;
+}
+
+@media only screen and (max-width: 768px) {
+  .postPage .title {
+    font-size: 70px;
+    position: fixed;
+    top: 10px;
+    line-height: 1.1;
+  }
+
+  .postPage .content {
+    width: 85%;
+    margin-top: 270px;
+    margin-left: 1.5dvw;
+    margin-bottom: 170px;
+  }
+
+  .postPage .content p {
+    font-size: 15px;
+  }
+
+  .postPage .BackHome > p {
+    display: none;
+  }
+
+  .postPage .BackHome {
+    bottom: 1.5dvh;
+    left: 1.5dvh;
+  }
+
+  .postPage .BackHome > img {
+    width: 10px;
+  }
+}

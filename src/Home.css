@@ -1,0 +1,88 @@
+.contact > p:nth-child(1) {
+  width: 50%;
+  font-weight: 400;
+  line-height: 1.4;
+  font-size: 18px;
+  font-family: var(--auxiliar-font);
+  margin-bottom: 40px;
+}
+
+.contact > a {
+  font-family: var(--auxiliar-font);
+  width: fit-content;
+  padding: 10px 20px;
+  border: 1px solid #222;
+}
+
+.contact > p:nth-child(2):hover {
+  cursor: pointer;
+}
+
+.projects {
+  display: flex;
+  width: 40vw;
+  justify-content: space-between;
+  position: fixed;
+  bottom: 30vh;
+}
+
+.project {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.project > p {
+  margin-right: 8px;
+}
+
+img {
+  width: 15px;
+  aspect-ratio: 1/1;
+  transform: rotate(90deg);
+}
+
+.project:hover {
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.footer {
+  position: fixed;
+  bottom: -10px;
+  left: 0px;
+  width: 98.5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 10px;
+}
+
+.footer > p:hover,
+.footer > a:hover {
+  cursor: pointer;
+  font-weight: 500;
+}
+
+@media only screen and (max-width: 768px) {
+  .contact > p:nth-child(1) {
+    width: 80%;
+    line-height: 1.6;
+    font-size: 17px;
+    font-family: var(--auxiliar-font);
+  }
+
+  .contact > p:nth-child(2) {
+    margin-top: 40px;
+  }
+
+  .projects {
+    flex-direction: column;
+    position: initial;
+    margin-top: 100px;
+  }
+
+  .footer {
+    width: 93vw;
+  }
+}
