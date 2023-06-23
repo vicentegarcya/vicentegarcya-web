@@ -1,0 +1,27 @@
+.ProgressBar {
+    width: 100vw;
+    height: 12px;
+    background-color: #c8c8c8;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.ProgressBarActual {
+    width: 1vw;
+    height: 12px;
+    background-color: #767676;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+@media only screen and (max-width: 768px) {
+    .ProgressBar {
+        height: 5px;
+    }
+    
+    .ProgressBarActual {
+        height: 5px;
+    }
+}

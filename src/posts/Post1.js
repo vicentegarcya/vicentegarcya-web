@@ -1,11 +1,38 @@
-import '../posts/postPage.css';
-import BackHome from '../components/BackHome/BackHome';
+import "../posts/postPage.css";
+import BackHome from "../components/BackHome/BackHome";
+import ProgressBar from "../components/ProgressBar/ProgressBar";
+import { useState, useEffect } from "react";
 
 function Post1() {
+  const [scrollTop, setScrollTop] = useState(0);
+
+  const onScroll = () => {
+    // This will calculate how many pixels the page is vertically
+    const winScroll = document.documentElement.scrollTop;
+    // This is responsible for subtracticing the total height of the page - where the users page is scrolled to
+    const height =
+      document.documentElement.scrollHeight -
+      document.documentElement.clientHeight;
+
+    // This will calculate the final total of the percentage of how much the user has scrolled.
+    const scrolled = (winScroll / height) * 100;
+
+    setScrollTop(scrolled);
+  };
+
+  useEffect(() => {
+    // Fires when the document view has been scrolled
+    window.addEventListener("scroll", onScroll);
+
+    // 
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   return (
     <div className="postPage">
+      <ProgressBar progress={scrollTop} />
       <h1 className="title">Gracias Auri</h1>
-      <section className="content">
+      <section progress={scrollTop} className="content" >
         <p>
           ¿Y si el amor por las cosas fuera mayor que nuestro propio deseo?
           Anteponer el bienestar y la felicidad de una rosa por encima de
