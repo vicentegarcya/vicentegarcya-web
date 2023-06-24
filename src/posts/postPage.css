@@ -20,6 +20,10 @@
   margin-bottom: 40px;
 }
 
+.postPage .text-strikethrough {
+  text-decoration: line-through;
+}
+
 @media only screen and (max-width: 768px) {
   .postPage .title {
     font-size: 70px;

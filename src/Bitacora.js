@@ -12,6 +12,10 @@ function Bitacora() {
           <p>[01] Gracias Auri</p>
           <img alt="arrow" src={arrowLink}></img>
         </Link>
+        <Link className="post" to={"/bitacora/2"}>
+          <p>[02] A mi yo niño</p>
+          <img alt="arrow" src={arrowLink}></img>
+        </Link>
       </section>
       <BackHome />
     </div>
