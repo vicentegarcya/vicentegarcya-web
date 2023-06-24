@@ -1,6 +1,7 @@
 import "../posts/postPage.css";
 import BackHome from "../components/BackHome/BackHome";
 import ProgressBar from "../components/ProgressBar/ProgressBar";
+
 import { useState, useEffect } from "react";
 
 function Post1() {

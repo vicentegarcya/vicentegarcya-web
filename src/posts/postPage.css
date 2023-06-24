@@ -10,7 +10,7 @@
   width: 55%;
   margin-top: 340px;
   margin-left: 8vw;
-  margin-bottom: 340px;
+  padding-bottom: 300px;
 }
 
 .postPage .content p {
@@ -32,11 +32,13 @@
     width: 85%;
     margin-top: 270px;
     margin-left: 1.5dvw;
-    margin-bottom: 170px;
+    padding-bottom: 200px;
   }
 
   .postPage .content p {
     font-size: 15px;
+    position: relative;
+    z-index: 1;
   }
 
   .postPage .BackHome > p {

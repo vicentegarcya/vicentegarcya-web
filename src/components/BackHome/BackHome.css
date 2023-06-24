@@ -19,6 +19,8 @@
 .BackHome img {
   transform: rotate(-180deg);
   margin-right: 8px;
+  width: 15px;
+  aspect-ratio: 1/1;
 }
 
 @media only screen and (max-width: 768px) {
