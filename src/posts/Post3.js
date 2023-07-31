@@ -33,7 +33,7 @@ function Post3() {
     <div className="postPage">
       <ProgressBar progress={scrollTop} />
       <h1 className="title">Ese límite no es tuyo</h1>
-      <section progress={scrollTop} className="content">
+      <section progress={scrollTop} className={"content post3"}>
         <p>
           Un buen día se te ilumina el alma y despiertas. Bueno, varios días
           para serte sincero.

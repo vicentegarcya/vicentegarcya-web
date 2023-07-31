@@ -14,6 +14,10 @@
   padding-bottom: 300px;
 }
 
+.postPage .content.post3 {
+  margin-top: 500px;
+}
+
 .postPage .content p {
   line-height: 1.5;
   font-size: 18px;
@@ -38,6 +42,10 @@
     margin-top: 270px;
     margin-left: 1.5dvw;
     padding-bottom: 200px;
+  }
+
+  .postPage .content.post3 {
+    margin-top: 340px;
   }
 
   .postPage .content p {
