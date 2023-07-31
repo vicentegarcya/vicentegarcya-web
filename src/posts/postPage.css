@@ -4,6 +4,7 @@
   filter: opacity(0.05);
   position: fixed;
   top: 10px;
+  width: 80vw;
 }
 
 .postPage .content {
