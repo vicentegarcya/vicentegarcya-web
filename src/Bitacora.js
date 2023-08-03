@@ -20,6 +20,10 @@ function Bitacora() {
           <p>[03] Ese límite no es tuyo</p>
           <img alt="arrow" src={arrowLink}></img>
         </Link>
+        <Link className="post" to={"/bitacora/4"}>
+          <p>[04] Romanticismo</p>
+          <img alt="arrow" src={arrowLink}></img>
+        </Link>
       </section>
       <BackHome />
     </div>
