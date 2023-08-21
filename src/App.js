@@ -6,6 +6,7 @@ import Post1 from './posts/Post1';
 import Post2 from './posts/Post2';
 import Post3 from './posts/Post3';
 import Post4 from './posts/Post4';
+import Post5 from './posts/Post5';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path="/bitacora/2" element={<Post2 />} />
           <Route path="/bitacora/3" element={<Post3 />} />
           <Route path="/bitacora/4" element={<Post4 />} />
+          <Route path="/bitacora/5" element={<Post5 />} />
         </Routes>
     </div>
   );

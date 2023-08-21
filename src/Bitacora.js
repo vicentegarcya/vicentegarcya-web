@@ -24,6 +24,10 @@ function Bitacora() {
           <p>[04] Romanticismo</p>
           <img alt="arrow" src={arrowLink}></img>
         </Link>
+        <Link className="post" to={"/bitacora/5"}>
+          <p>[05] Masculinidad</p>
+          <img alt="arrow" src={arrowLink}></img>
+        </Link>
       </section>
       <BackHome />
     </div>

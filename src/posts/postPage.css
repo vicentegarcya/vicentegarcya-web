@@ -29,6 +29,14 @@
   text-decoration: line-through;
 }
 
+.postPage .bold {
+  font-weight: bold;
+}
+
+.postPage .cursive {
+  font-style: italic;
+}
+
 @media only screen and (max-width: 768px) {
   .postPage .title {
     font-size: 70px;
