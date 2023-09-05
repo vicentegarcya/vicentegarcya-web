@@ -1,0 +1,90 @@
+.Header {
+  width: 100vw;
+  height: 150px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 0 4rem 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  font-size: 2rem;
+  z-index: 99;
+  font-family: "Neue-Montreal-Book";
+}
+
+.Header > a {
+  margin-right: 4%;
+}
+
+.Header > div:not(.header_unfolded) {
+  border: 1px solid var(--main-black);
+  padding: 0.5rem 2.5rem;
+  border-radius: 30px;
+  color: var(--main-black);
+  transition: all 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+
+.Header > div:not(.header_unfolded):hover {
+  background: var(--main-black);
+  color: var(--main-white);
+  cursor: pointer;
+}
+
+/* HEADER UNFOLDED */
+
+.header_unfolded {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background-color: var(--main-highlight-color);
+}
+
+.header_unfolded > div:nth-child(1) {
+  background: url("../../images/x.png");
+  background-size: cover;
+  width: 70px;
+  height: 70px;
+  position: absolute;
+  top: 8vh;
+  right: 5vw;
+}
+
+.header_unfolded > div:nth-child(1):hover {
+  cursor: pointer;
+  transform: scale(0.85);
+  transition: transform 0.2s ease-in;
+}
+
+.unfolded_links {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 12vw;
+  font-family: "Neue-Montreal-Medium";
+  line-height: 0.8;
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+}
+
+.unfolded_links > a:hover {
+  cursor: pointer;
+}
+
+.header_unfolded > div:nth-child(3) {
+  width: 30%;
+  position: absolute;
+  bottom: 1rem;
+  right: 3vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header_unfolded > div:nth-child(3) > p {
+  margin: 0;
+}

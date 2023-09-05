@@ -1,36 +1,41 @@
+/* WELCOME SECTION*/
+
 .welcome {
   width: 100vw;
   height: 100vh;
+  position: relative;
+  color: var(--main-black);
+  padding: 3rem 4rem;
+  display: flex;
+  align-items: flex-end;
+}
+
+.welcome_wrapper {
   background: url('./images/IMG_6197.webp');
   background-position-y: -270px;
   background-size: cover;
   filter: grayscale();
-  position: relative;
-  color: var(--main-white);
-  padding: 3rem 4rem;
-}
-
-.welcome_wrapper {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: var(--main-black);
-  opacity: 0.6;
+  opacity: 0.5;
 }
 
 .welcome_content {
   display: flex;
-  align-items: flex-start;
+  align-items: flex-end;
   justify-content: space-between;
+  padding-top: 100px;
 }
 
 .welcome_content_left p {
-  font-size: 82px;
+  font-size: 7vw;
   position: relative;
   z-index: 2;
   line-height: 1.15;
+  margin: 0;
 }
 
 .welcome_content_left p span {
@@ -38,16 +43,72 @@
 }
 
 .welcome_content_left {
-  width: 60%;
+  width: 57%;
 }
 
 .welcome_content_right {
+  width: 25%;
   display: flex;
   flex-direction: column;
+  margin-bottom: 3vh;
 }
 
 .welcome_content_right > div {
   position: relative;
+  width: 100%;
+  height: 74px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid var(--main-black);
+  overflow: hidden;
+}
+
+.welcome_content_right > div:hover {
+  /* background: linear-gradient(90deg, rgba(191,255,185, 0.05) 0%, rgba(191,255,185, 1) 10%,rgba(191,255,185, 1) 90%, rgba(191,255,185, 0.1) 100%); */
+  background: rgba(191,255,185, 1);
+  color: var(--main-black);
+  cursor: url("./images/cursor_custom.png"), pointer;
+  border: none;
+  transition: all 0.4s ease-in-out;
+}
+
+.welcome_content_right > div:last-child {
+  border-bottom:  1px solid var(--main-black);
+}
+
+.welcome_content_right > div > p {
+  font-size: 26px;
+}
+
+.welcome_content_right > div > p:nth-child(1) {
+  transform: scaleY(1.05);
+}
+
+.welcome_content_right > div > p:nth-child(2) {
+  font-family: "Neue-Montreal-Book";
+}
+
+.welcome_content_right > div:hover > p:nth-child(1) {
+  scale: 3;
+  transform: translate(50%, 20%);
+  letter-spacing: 0px;
+  transition: all 0.4s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+
+.welcome_content_right > div:hover > p:nth-child(2) {
+  opacity: 0;
+}
+
+.welcome_content_right > div > svg {
+  width: 100px;
+  height: 20px;
+  filter: invert(99%) sepia(50%) saturate(68%) hue-rotate(177deg) brightness(120%) contrast(95%)
+}
+
+.about {
+  width: 100vw;
+  height: 100vh;
 }
 
 @media only screen and (max-width: 768px) {
