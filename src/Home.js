@@ -1,55 +1,30 @@
+import { useRef } from "react";
 import "./Home.css";
-import arrowLink from "../src/images/up-right-arrow.png";
-import { Link } from "react-router-dom";
 
 function Home() {
+  const aboutSection = useRef();
+
   return (
     <div className="Home">
-      <section className="contact">
-        <p>
-          I'm a sensitive web developer & designer creating deep and emotional
-          experiences.
-        </p>
-        <a href="mailto:vicentegarciaayllon@gmail.com">click here</a>
-      </section>
-      <section className="projects">
-        <div className="project">
-          <p
-            onClick={() =>
-              window.open("https://www.labellezadelaoscuridad.com/")
-            }
-          >
-            project [01]
-          </p>
-          <img alt="arrow" src={arrowLink}></img>
-        </div>
-        <div className="project">
-          <p onClick={() => window.open("https://fckcss.netlify.app/")}>
-            project [02]
-          </p>
-          <img alt="arrow" src={arrowLink}></img>
-        </div>
-        <div className="project">
-          <p
-            onClick={() =>
-              window.open("https://vicentegarcya.github.io/elon-jump/")
-            }
-          >
-            project [03]
-          </p>
-          <img alt="arrow" src={arrowLink}></img>
+      <section className="welcome">
+        <img alt="Vicente working"></img>
+        <div className="welcome_wrapper"></div>
+        <div className="welcome_content">
+          <div className="welcome_content_left">
+            <p>
+              Vicente Garcya. Creative <span>Web Developer</span> & <span>Digital</span> Experience <span>Crafter</span>.
+            </p>
+          </div>
+          <div className="welcome_content_right">
+            <div onClick={() => aboutSection.current.scrollIntoView({ behavior: "smooth" })}>About</div>
+            <div /*onClick={() => aboutSection.current.scrollIntoView({ behavior: "smooth" })}*/>Projects</div>
+            <div /*onClick={() => aboutSection.current.scrollIntoView({ behavior: "smooth" })}*/>How I work</div>
+            <div /*onClick={() => aboutSection.current.scrollIntoView({ behavior: "smooth" })}*/>Services</div>
+          </div>
         </div>
       </section>
-      <section className="footer">
-        <p
-          onClick={() =>
-            window.open("https://www.instagram.com/vicentegarcya/")
-          }
-        >
-          INSTAGRAM
-        </p>
-        <p><Link to={"/bitacora"}>BITÁCORA</Link></p>
-        <a href="mailto:vicentegarciaayllon@gmail.com">CONTACT</a>
+      <section ref={aboutSection} className="about">
+      hola about
       </section>
     </div>
   );

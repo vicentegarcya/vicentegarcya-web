@@ -1,88 +1,55 @@
-.contact > p:nth-child(1) {
-  width: 50%;
-  font-weight: 400;
-  line-height: 1.4;
-  font-size: 18px;
-  font-family: var(--auxiliar-font);
-  margin-bottom: 40px;
+.welcome {
+  width: 100vw;
+  height: 100vh;
+  background: url('./images/IMG_6197.webp');
+  background-position-y: -270px;
+  background-size: cover;
+  filter: grayscale();
+  position: relative;
+  color: var(--main-white);
+  padding: 3rem 4rem;
 }
 
-.contact > a {
-  font-family: var(--auxiliar-font);
-  width: fit-content;
-  padding: 10px 20px;
-  border: 1px solid #222;
+.welcome_wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--main-black);
+  opacity: 0.6;
 }
 
-.contact > p:nth-child(2):hover {
-  cursor: pointer;
-}
-
-.projects {
+.welcome_content {
   display: flex;
-  width: 40vw;
+  align-items: flex-start;
   justify-content: space-between;
-  position: fixed;
-  bottom: 30vh;
 }
 
-.project {
+.welcome_content_left p {
+  font-size: 82px;
+  position: relative;
+  z-index: 2;
+  line-height: 1.15;
+}
+
+.welcome_content_left p span {
+  font-family: "Editorial-New-Light";
+}
+
+.welcome_content_left {
+  width: 60%;
+}
+
+.welcome_content_right {
   display: flex;
-  flex-direction: row;
-  align-items: center;
+  flex-direction: column;
 }
 
-.project > p {
-  margin-right: 8px;
-}
-
-.Home img {
-  width: 15px;
-  aspect-ratio: 1/1;
-  transform: rotate(90deg);
-}
-
-.project:hover {
-  cursor: pointer;
-  font-weight: 500;
-}
-
-.footer {
-  position: fixed;
-  bottom: -10px;
-  left: 0px;
-  width: 98.5%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin: 0 10px;
-}
-
-.footer > p:hover,
-.footer > a:hover {
-  cursor: pointer;
-  font-weight: 500;
+.welcome_content_right > div {
+  position: relative;
 }
 
 @media only screen and (max-width: 768px) {
-  .contact > p:nth-child(1) {
-    width: 80%;
-    line-height: 1.6;
-    font-size: 17px;
-    font-family: var(--auxiliar-font);
-  }
 
-  .contact > p:nth-child(2) {
-    margin-top: 40px;
-  }
-
-  .projects {
-    flex-direction: column;
-    position: initial;
-    margin-top: 100px;
-  }
-
-  .footer {
-    width: 93vw;
-  }
 }
