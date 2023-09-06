@@ -236,9 +236,9 @@
   display: flex;
   flex-direction: column;
   padding: 10px;
-  background-image: url('./images/IMG_6197.webp');
   background-size: cover;
-  filter: grayscale();
+  position: relative;
+  filter: brightness(90%);
 }
 
 .projects_grid .keywords:hover {
@@ -264,13 +264,13 @@
 
 .projects_grid .keywords:hover .video_wrapper {
   opacity: 0.6;
-  transition: all 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+  transition: all 0.3s cubic-bezier(0.77, 0, 0.175, 1);
 }
 
 .projects_grid .keywords:hover > p {
   opacity: 1;
   transform: translateY(0px);
-  transition: all 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+  transition: all 0.3s cubic-bezier(0.77, 0, 0.175, 1);
 }
 
 .projects_grid > div > div:nth-child(2) {
@@ -284,7 +284,7 @@
 
 .projects_grid > div > div > p {
   font-size: 14px;
-  font-family: 'Neue-Montreal-Book';
+  font-family: "Neue-Montreal-Book";
   margin: 0;
   letter-spacing: 1px;
 }
@@ -309,4 +309,31 @@
   background-color: var(--main-white);
   grid-column: 6 / 8;
   grid-row: 6 / 11;
+}
+
+.projects_grid > div:nth-child(1) > .keywords {
+  background-image: url("./images/jimenagonz_mockup.webp");
+  background-size: cover;
+  background-position-x: -100px;
+}
+
+.projects_grid > div:nth-child(2) > .keywords {
+  background-image: url("./images/bso_mockup.webp");
+  background-size: 130%;
+  background-position-x: -50px;
+  background-position-y: -35px;
+}
+
+.projects_grid > div:nth-child(3) > .keywords {
+  background-image: url("./images/elonjump_mockup.webp");
+  background-size: 180%;
+  background-position-x: -70px;
+  background-position-y: -10px;
+}
+
+.projects_grid > div:nth-child(4) > .keywords {
+  background-image: url("./images/senseat_mockup.webp");
+  background-size: 250%;
+  background-position-x: -145px;
+  background-position-y: -75px;
 }

@@ -129,7 +129,7 @@ function Home() {
           <div>
             <div className="keywords">
               <div className="video_wrapper"></div>
-              <p>Corporate website</p>
+              <p>Corporate Website</p>
               <p>Javascript(ES6)</p>
               <p>React</p>
               <p>NextJS</p>
@@ -172,6 +172,7 @@ function Home() {
             <div className="keywords">
               <div className="video_wrapper"></div>
               <p>Web App</p>
+              <p>Javascript (ES6)</p>
               <p>React</p>
               <p>NextJs</p>
               <p>NodeJs</p>
