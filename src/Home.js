@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 
 function Home() {
   const aboutSection = useRef();
+  const projectsSection = useRef();
 
   return (
     <div className="Home">
@@ -28,7 +29,7 @@ function Home() {
             </div>
             <div
               onClick={() =>
-                aboutSection.current.scrollIntoView({ behavior: "smooth" })
+                projectsSection.current.scrollIntoView({ behavior: "smooth" })
               }
             >
               <p>Projects</p>
@@ -58,29 +59,75 @@ function Home() {
         <div className="about_main">
           <div className="about_text">
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
-              facilisis elit non dui consequat convallis. Lorem ipsum dolor sit
-              amet, consectetur adipiscing elit.
+              I have 3+ years of experience creating websites and digital
+              experiences. I love working on soulful projects that are willing
+              to try new ideas and solutions.
             </p>
             <p>
-              Sed lorem diam, porta vitae blandit id, iaculis a libero. Mauris
-              maximus vestibulum turpis eget efficitur. Vivamus tempor quam id
-              nisl mattis molestie.
+              Technologies I commonly use: SCSS, Javascript (ES6), React,
+              NextJS, Wordpress, GSAP, NodeJS, MongoDB, Figma.
             </p>
             <p>
-              Sed lacinia, justo et molestie finibus, eros dui tristique metus,
-              at commodo felis augue ut eros.
+              I am a very sensitive and empathetic person, and I love working
+              with people who are just as passionate about creating as I am.
             </p>
           </div>
           <div className="about_bubbles">
-            <Link to={"/bitacora"}>Mis textos</Link>
-            <a href="https://savee.it/vicentegarcya/" target="_blank" rel="noreferrer">Inspo</a>
-            <a href="https://mailchi.mp/cad3bc2e7c34/despertar-creativo" target="_blank" rel="noreferrer">Newsletter Fav</a>
-            <a href="https://open.spotify.com/playlist/5GWpa19ufMdY94SDjBQwA7?si=1d868ff17cc2468e" target="_blank" rel="noreferrer">My Playlist</a>
-            <a href="https://www.disney.es/peliculas/soul" target="_blank" rel="noreferrer">Movie Fav</a>
-            <a href="https://www.britannica.com/plant/daisy" target="_blank" rel="noreferrer">My Flower</a>
+            <Link to={"/bitacora"}>My Writings</Link>
+            <a
+              href="https://savee.it/vicentegarcya/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Inspo
+            </a>
+            <a
+              href="https://mailchi.mp/cad3bc2e7c34/despertar-creativo"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Newsletter Fav
+            </a>
+            <a
+              href="https://open.spotify.com/playlist/5GWpa19ufMdY94SDjBQwA7?si=1d868ff17cc2468e"
+              target="_blank"
+              rel="noreferrer"
+            >
+              My Playlist
+            </a>
+            <a
+              href="https://www.disney.es/peliculas/soul"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Movie Fav
+            </a>
+            <a
+              href="https://www.britannica.com/plant/daisy"
+              target="_blank"
+              rel="noreferrer"
+            >
+              My Flower
+            </a>
+            <a
+              href="https://open.spotify.com/playlist/5GWpa19ufMdY94SDjBQwA7?si=1d868ff17cc2468e"
+              target="_blank"
+              rel="noreferrer"
+            >
+              My Playlist
+            </a>
+            <a
+              href="https://open.spotify.com/playlist/5GWpa19ufMdY94SDjBQwA7?si=1d868ff17cc2468e"
+              target="_blank"
+              rel="noreferrer"
+            >
+              My Playlist
+            </a>
           </div>
         </div>
+      </section>
+      <section ref={projectsSection} className="projects">
+          <SectionTitle title="Projects"></SectionTitle>
       </section>
     </div>
   );
