@@ -26,7 +26,6 @@ function Home() {
               }
             >
               <p>About</p>
-              <p>Click</p>
             </div>
             <div
               onClick={() =>
@@ -34,7 +33,6 @@ function Home() {
               }
             >
               <p>Projects</p>
-              <p>Click</p>
             </div>
             <div
               onClick={() =>
@@ -42,7 +40,6 @@ function Home() {
               }
             >
               <p>How I work</p>
-              <p>Click</p>
             </div>
             <div
               onClick={() =>
@@ -50,7 +47,6 @@ function Home() {
               }
             >
               <p>Services</p>
-              <p>Click</p>
             </div>
           </div>
         </div>
@@ -131,28 +127,56 @@ function Home() {
         <SectionTitle title="Selected Projects"></SectionTitle>
         <div className="projects_grid">
           <div>
-            <div></div>
+            <div className="keywords">
+              <div className="video_wrapper"></div>
+              <p>Corporate website</p>
+              <p>Javascript(ES6)</p>
+              <p>React</p>
+              <p>NextJS</p>
+              <p>GSAP</p>
+            </div>
             <div>
               <p>jimenagonzalez.in</p>
               <p>001</p>
             </div>
           </div>
           <div>
-            <div></div>
+            <div className="keywords">
+              <div className="video_wrapper"></div>
+              <p>Product Landing Page</p>
+              <p>Javascript(ES6)</p>
+              <p>React</p>
+              <p>NextJS</p>
+              <p>GSAP</p>
+            </div>
             <div>
               <p>la belleza de la oscuridad</p>
               <p>002</p>
             </div>
           </div>
           <div>
-            <div></div>
+            <div className="keywords">
+              <div className="video_wrapper"></div>
+              <p>Browser Game</p>
+              <p>Javascript(ES6)</p>
+              <p>HTML</p>
+              <p>CSS</p>
+              <p>Canvas</p>
+            </div>
             <div>
-              <p>elon Jump</p>
+              <p>elon jump</p>
               <p>003</p>
             </div>
           </div>
           <div>
-            <div></div>
+            <div className="keywords">
+              <div className="video_wrapper"></div>
+              <p>Web App</p>
+              <p>React</p>
+              <p>NextJs</p>
+              <p>NodeJs</p>
+              <p>MongoDB</p>
+            </div>
             <div>
               <p>senseat</p>
               <p>004</p>

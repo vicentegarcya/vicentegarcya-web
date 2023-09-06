@@ -15,13 +15,13 @@
   background-position-y: -380px;
   background-position-x: -170px;
   background-size: 115%;
-  filter: grayscale();
+
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  opacity: 0.35;
+  opacity: 0.25;
 }
 
 .welcome_content {
@@ -60,50 +60,29 @@
   height: 38px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
   overflow: hidden;
 }
 
 .welcome_content_right > div:hover {
-  /* background: linear-gradient(90deg, rgba(191,255,185, 0.05) 0%, rgba(191,255,185, 1) 10%,rgba(191,255,185, 1) 90%, rgba(191,255,185, 0.1) 100%); */
-  background: rgba(191, 255, 185, 1);
-  color: var(--main-black);
-  cursor: url("./images/cursor_custom.png"), pointer;
+  cursor: pointer;
   transition: all 0.4s ease-in-out;
-}
-
-.welcome_content_right > div:last-child {
-  border-bottom: 1px solid var(--main-black);
+  height: 80px;
 }
 
 .welcome_content_right > div > p {
-  font-size: 34px;
+  font-size: 42px;
+  text-align: end;
 }
 
 .welcome_content_right > div > p:nth-child(1) {
   transform: scaleY(1.05);
 }
 
-.welcome_content_right > div > p:nth-child(2) {
-  font-family: "Neue-Montreal-Book";
-}
-
 .welcome_content_right > div:hover > p:nth-child(1) {
-  scale: 3;
-  transform: translate(50%, 20%);
+  scale: 2;
   letter-spacing: 0px;
   transition: all 0.4s cubic-bezier(0.445, 0.05, 0.55, 0.95);
-}
-
-.welcome_content_right > div:hover > p:nth-child(2) {
-  opacity: 0;
-}
-
-.welcome_content_right > div > svg {
-  width: 100px;
-  height: 20px;
-  filter: invert(99%) sepia(50%) saturate(68%) hue-rotate(177deg)
-    brightness(120%) contrast(95%);
 }
 
 /* ABOUT SECTION */
@@ -248,18 +227,50 @@
   align-items: center;
   justify-content: space-between;
   padding: 4%;
+  position: relative;
 }
 
-.projects_grid > div > div:nth-child(1) {
+.projects_grid .keywords {
   width: 100%;
   height: 100%;
   display: flex;
-  flex-direction: row;
-  align-items: flex-end;
-  justify-content: space-between;
+  flex-direction: column;
+  padding: 10px;
   background-image: url('./images/IMG_6197.webp');
   background-size: cover;
   filter: grayscale();
+}
+
+.projects_grid .keywords:hover {
+  cursor: pointer;
+}
+
+.projects_grid .keywords > p {
+  opacity: 0;
+  color: var(--main-white);
+  transform: translateY(-20px);
+}
+
+.video_wrapper {
+  width: 100%;
+  height: 100%;
+  background-color: var(--main-black);
+  opacity: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+
+.projects_grid .keywords:hover .video_wrapper {
+  opacity: 0.6;
+  transition: all 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.projects_grid .keywords:hover > p {
+  opacity: 1;
+  transform: translateY(0px);
+  transition: all 0.5s cubic-bezier(0.77, 0, 0.175, 1);
 }
 
 .projects_grid > div > div:nth-child(2) {
