@@ -11,6 +11,7 @@ function Home() {
     <div className="Home">
       <section className="welcome">
         <div className="welcome_wrapper"></div>
+        <div className="welcome_wrapper_plant"></div>
         <div className="welcome_content">
           <div className="welcome_content_left">
             <p>
@@ -127,7 +128,37 @@ function Home() {
         </div>
       </section>
       <section ref={projectsSection} className="projects">
-          <SectionTitle title="Projects"></SectionTitle>
+        <SectionTitle title="Selected Projects"></SectionTitle>
+        <div className="projects_grid">
+          <div>
+            <div></div>
+            <div>
+              <p>jimenagonzalez.in</p>
+              <p>001</p>
+            </div>
+          </div>
+          <div>
+            <div></div>
+            <div>
+              <p>la belleza de la oscuridad</p>
+              <p>002</p>
+            </div>
+          </div>
+          <div>
+            <div></div>
+            <div>
+              <p>elon Jump</p>
+              <p>003</p>
+            </div>
+          </div>
+          <div>
+            <div></div>
+            <div>
+              <p>senseat</p>
+              <p>004</p>
+            </div>
+          </div>
+        </div>
       </section>
     </div>
   );
