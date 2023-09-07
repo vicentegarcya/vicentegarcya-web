@@ -1,8 +1,14 @@
 import { useState } from "react";
 import "./MetodologiaStep.css";
 import { animated, useSpring } from "@react-spring/web";
+import { forwardRef } from "react";
 
-export default function MetodologiaStep({ number, title, description, emojis }) {
+const MetodologiaStep = forwardRef(function MetodologiaStep({
+  number,
+  title,
+  description,
+  emojis,
+}, ref) {
   const [isDesplegado, setIsDesplegado] = useState(false);
 
   const openAnimation = useSpring({
@@ -11,7 +17,17 @@ export default function MetodologiaStep({ number, title, description, emojis }) 
       maxHeight: isDesplegado ? "500px" : "0",
       marginBottom: isDesplegado ? "1rem" : "0rem",
     },
-    config: { duration: "300" },
+  });
+
+  const emojisStyle = useSpring({
+    from: {
+      filter: "contrast(150%) grayscale(60%) brightness(70%)",
+    },
+    to: {
+      filter: isDesplegado
+        ? "contrast(100%) grayscale(0%) brightness(100%)"
+        : "contrast(150%) grayscale(60%) brightness(70%)",
+    },
   });
 
   const rotateCross = useSpring({
@@ -20,7 +36,11 @@ export default function MetodologiaStep({ number, title, description, emojis }) 
   });
 
   return (
-    <div className="metodologia_step">
+    <div
+      ref={ref}
+      className="metodologia_step"
+      onClick={() => setIsDesplegado(!isDesplegado)}
+    >
       <animated.div style={openAnimation}>
         <p>
           <span>
@@ -30,19 +50,20 @@ export default function MetodologiaStep({ number, title, description, emojis }) 
         </p>
         <p>{description}</p>
       </animated.div>
-      <div>
+      <animated.div style={emojisStyle}>
         {emojis.map((emoji, index) => {
-          return <div>{emoji}</div>;
+          return <div key={index}>{emoji}</div>;
         })}
-      </div>
+      </animated.div>
       <animated.div
         style={
           !isDesplegado
             ? { transform: rotateCross.x.to((value) => `rotate(${value}deg)`) }
             : undefined
         }
-        onClick={() => setIsDesplegado(!isDesplegado)}
       ></animated.div>
     </div>
   );
-}
+});
+
+export default MetodologiaStep;

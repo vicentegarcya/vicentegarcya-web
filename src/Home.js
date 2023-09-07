@@ -1,19 +1,46 @@
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import "./Home.css";
 import SectionTitle from "./components/SectionTitle/SectionTitle";
 import { Link } from "react-router-dom";
 import MetodologiaStep from "./components/MetodologiaStep/MetodologiaStep";
 
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+
+
 function Home() {
+  gsap.registerPlugin(ScrollTrigger);
+
+  const welcomeWrapper = useRef();
   const aboutSection = useRef();
   const projectsSection = useRef();
   const metodologiaSection = useRef();
+  const firstMethod = useRef();
+
+  useEffect(() => {
+    firstMethod.current.click();
+
+    gsap.fromTo(
+      welcomeWrapper.current,
+      {
+        opacity: 0.25
+      },
+      {
+        opacity: 0,
+        scrollTrigger: {
+          trigger: welcomeWrapper.current,
+          start: "bottom 95%",
+          end: "bottom end",
+          scrub: true,
+        },
+      }
+    );
+  },[])
 
   return (
     <div className="Home">
       <section className="welcome">
-        <div className="welcome_wrapper"></div>
-        <div className="welcome_wrapper_plant"></div>
+        <div ref={welcomeWrapper} className="welcome_wrapper"></div>
         <div className="welcome_content">
           <div className="welcome_content_left">
             <p>
@@ -193,29 +220,30 @@ function Home() {
         <SectionTitle title="Method"></SectionTitle>
         <div className="metodologia_main">
           <MetodologiaStep
+            ref={firstMethod}
             number={1}
             title="Briefing"
-            description="We have a meeting where we meet each other and we start to understand
+            description="We have a meeting where we meet each other and we understand
           the requirements of the project, the problems and the solutions :)"
-            emojis={["👋", "🌱", "🤝"]}
+            emojis={["✨", "🌱", "📬"]}
           ></MetodologiaStep>
           <MetodologiaStep
             number={2}
             title="Proposal"
             description="I propose different designs and I check with you if that's ok. Once you validate the design vibe and ideas, I'll make a final design to show yo how it would look like."
-            emojis={["👋", "🌱", "🤝"]}
+            emojis={["💻", "💍", "🤝"]}
           ></MetodologiaStep>
           <MetodologiaStep
             number={3}
             title="Crafting"
             description="I code the website delivering weekly updates so you can give me feedback and see how it's going. In this stage, I should receive the necessary content for the web."
-            emojis={["👋", "🌱", "🤝"]}
+            emojis={["🎩", "💡", "👨🏻‍🎨"]}
           ></MetodologiaStep>
           <MetodologiaStep
             number={4}
             title="Handoff"
             description="I put the web online and hand you over the documentation and the source code. We have an exit meeting where I'll explain you everyting and solve any doubt."
-            emojis={["👋", "🌱", "🤝"]}
+            emojis={["📦", "📓", "❤️"]}
           ></MetodologiaStep>
         </div>
       </section>

@@ -8,6 +8,7 @@
   padding: 3rem 4rem;
   display: flex;
   align-items: flex-end;
+  background-color: var(--main-white);
 }
 
 .welcome_wrapper {
@@ -15,8 +16,7 @@
   background-position-y: -380px;
   background-position-x: -170px;
   background-size: 115%;
-
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -96,7 +96,7 @@
   flex-direction: column;
   justify-content: space-between;
   padding: 1rem 4rem;
-  background-color: var(--main-white);
+  background: var(--main-white);
 }
 
 .about_main {
@@ -384,13 +384,13 @@
 }
 
 .metodologia_main {
-  width: 100%;
+  width: 93%;
   height: auto;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   margin-bottom: 7.5%;
-  margin: auto 0;
+  margin: auto;
 }
 
 .metodologia_main p {
