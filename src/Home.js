@@ -7,7 +7,6 @@ import MetodologiaStep from "./components/MetodologiaStep/MetodologiaStep";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
-
 function Home() {
   gsap.registerPlugin(ScrollTrigger);
 
@@ -16,6 +15,7 @@ function Home() {
   const projectsSection = useRef();
   const metodologiaSection = useRef();
   const firstMethod = useRef();
+  const servicesSection = useRef();
 
   useEffect(() => {
     firstMethod.current.click();
@@ -23,7 +23,7 @@ function Home() {
     gsap.fromTo(
       welcomeWrapper.current,
       {
-        opacity: 0.25
+        opacity: 0.25,
       },
       {
         opacity: 0,
@@ -35,7 +35,7 @@ function Home() {
         },
       }
     );
-  },[])
+  }, []);
 
   return (
     <div className="Home">
@@ -74,7 +74,7 @@ function Home() {
             </div>
             <div
               onClick={() =>
-                aboutSection.current.scrollIntoView({ behavior: "smooth" })
+                servicesSection.current.scrollIntoView({ behavior: "smooth" })
               }
             >
               <p>Services</p>
@@ -245,6 +245,19 @@ function Home() {
             description="I put the web online and hand you over the documentation and the source code. We have an exit meeting where I'll explain you everyting and solve any doubt."
             emojis={["📦", "📓", "❤️"]}
           ></MetodologiaStep>
+        </div>
+      </section>
+      <section ref={servicesSection} className="services">
+        <SectionTitle title="Services"></SectionTitle>
+        <div className="services_main">
+          <div className="words">
+            <p>
+              <span>✺ FRONTEND DEVELOPMENT●</span>{" "}
+              <span>FULLSTACK DEVELOPMENT ✲</span> <span>▲SERVICE DESIGN</span>{" "}
+              <span>UX/UI DESIGN◉</span> <span>COPYWRITTING</span>
+            </p>
+          </div>
+          <div className="packages"></div>
         </div>
       </section>
     </div>

@@ -47,6 +47,7 @@
 html,
 body {
   margin: 0;
+  padding: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   width: 100vw;
@@ -65,4 +66,8 @@ body::-webkit-scrollbar{
 a {
   text-decoration: none;
   color: var(--main-black);
+}
+
+p {
+  margin: 0;
 }

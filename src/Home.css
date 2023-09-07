@@ -1,5 +1,13 @@
 /* WELCOME SECTION */
 
+.Home > section:not(:first-child) {
+  z-index: 1;
+}
+
+.Home > section:nth-child(n+3) {
+  position: relative;
+}
+
 .welcome {
   width: 100vw;
   height: 100vh;
@@ -8,7 +16,6 @@
   padding: 3rem 4rem;
   display: flex;
   align-items: flex-end;
-  background-color: var(--main-white);
 }
 
 .welcome_wrapper {
@@ -19,9 +26,8 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0.25;
+  width: 100vw;
+  height: 100vh;
 }
 
 .welcome_content {
@@ -33,9 +39,9 @@
 
 .welcome_content_left p {
   font-size: 7.25vw;
+  line-height: 1.05;
   position: relative;
   z-index: 2;
-  line-height: 1.05;
   margin: 0;
 }
 
@@ -95,7 +101,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 1rem 4rem;
+  padding: 3rem 4rem;
   background: var(--main-white);
 }
 
@@ -204,7 +210,8 @@
 .projects {
   width: 100vw;
   height: 100vh;
-  padding: 1rem 4rem 0 4rem;
+  max-height: 100vh;
+  padding: 3rem 4rem 0 4rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -375,7 +382,7 @@
 .metodologia {
   width: 100vw;
   height: 100vh;
-  padding: 1rem 4rem;
+  padding: 3rem 4rem;
   color: var(--main-black);
   background-color: var(--main-white);
   display: flex;
@@ -395,4 +402,36 @@
 
 .metodologia_main p {
   margin: 0;
+}
+
+/* SERVICES SECTION */
+
+.services {
+  width: 100vw;
+  height: 100vh;
+  padding: 3rem 4rem 2rem 4rem;
+  color: var(--main-black);
+  background-color: var(--main-white);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.services_main {
+  width: 100%;
+  height: 90%;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.services_main > .words {
+  width: 70%;
+  font-size: 4rem;
+  line-height: 1;
+}
+
+.services_main > .packages {
+  width: 50%;
 }
