@@ -1,0 +1,61 @@
+.metodologia_step {
+  width: 100%;
+  min-height: 10%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-top: 1px solid var(--main-black);
+  padding: 2%;
+  overflow-y: hidden;
+}
+
+.metodologia_step:last-child {
+  border-bottom: 1px solid var(--main-black);
+}
+
+.metodologia_step > div > p:nth-child(1) {
+  font-size: 25px;
+  font-family: "Neue-Montreal-Book";
+  margin-bottom: 40px;
+}
+
+.metodologia_step > div > p:nth-child(2) {
+  font-size: 20px;
+}
+
+.metodologia_step > div > p > span {
+  font-family: var(--auxiliar-font);
+  font-size: 18px;
+  margin-right: 5px;
+}
+
+.metodologia_step > div:nth-child(1) {
+  width: 40%;
+  transition: all 2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.metodologia_step > div:nth-child(2) {
+  width: 10%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: auto 25% auto 0;
+}
+
+.metodologia_step > div:nth-child(2) > div {
+  /* filter: contrast(130%) grayscale() brightness(80%); */
+  font-size: 30px;
+}
+
+.metodologia_step > div:nth-child(3) {
+  width: 20px;
+  height: 20px;
+  background-image: url("../../images/x.png");
+  background-size: cover;
+  margin: auto 0;
+  transition: all 2s cubic-bezier(0.175, 0.885, 0.32, 1);
+}
+
+.metodologia_step > div:nth-child(3):hover {
+    cursor: pointer;
+}

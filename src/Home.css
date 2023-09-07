@@ -62,6 +62,7 @@
   align-items: center;
   justify-content: flex-end;
   overflow: hidden;
+  transition: height 0.4s cubic-bezier(0.445, 0.05, 0.55, 0.95);
 }
 
 .welcome_content_right > div:hover {
@@ -77,6 +78,7 @@
 
 .welcome_content_right > div > p:nth-child(1) {
   transform: scaleY(1.05);
+  transition: all 0.4s cubic-bezier(0.445, 0.05, 0.55, 0.95);
 }
 
 .welcome_content_right > div:hover > p:nth-child(1) {
@@ -228,6 +230,13 @@
   justify-content: space-between;
   padding: 4%;
   position: relative;
+  transition: scale 0.3s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.projects_grid > div:hover {
+  cursor: url("./images/cursor_custom.png"), pointer;
+  scale: 1.2;
+  transition: all 0.3s cubic-bezier(0.77, 0, 0.175, 1);
 }
 
 .projects_grid .keywords {
@@ -241,14 +250,11 @@
   filter: brightness(90%);
 }
 
-.projects_grid .keywords:hover {
-  cursor: pointer;
-}
-
 .projects_grid .keywords > p {
   opacity: 0;
   color: var(--main-white);
   transform: translateY(-20px);
+  transition: all 0.3s cubic-bezier(0.77, 0, 0.175, 1);
 }
 
 .video_wrapper {
@@ -260,6 +266,7 @@
   top: 0;
   left: 0;
   opacity: 0;
+  transition: opacity 0.3s cubic-bezier(0.77, 0, 0.175, 1);
 }
 
 .projects_grid .keywords:hover .video_wrapper {
@@ -336,4 +343,56 @@
   background-size: 250%;
   background-position-x: -145px;
   background-position-y: -75px;
+}
+
+.projects_grid > div:nth-child(1) > .keywords:hover {
+  background-image: url("./images/jgi_video.gif");
+  background-size: cover;
+  background-position-x: 0;
+  background-position-y: 0;
+}
+.projects_grid > div:nth-child(2) > .keywords:hover {
+  background-image: url("./images/bso_video.gif");
+  background-size: cover;
+  background-position-x: 0;
+  background-position-y: 0;
+}
+.projects_grid > div:nth-child(3) > .keywords:hover {
+  background-image: url("./images/elonjump_video.gif");
+  background-size: cover;
+  background-position-x: -58px;
+  background-position-y: 0;
+}
+.projects_grid > div:nth-child(4) > .keywords:hover {
+  background-image: url("./images/senseat_video.gif");
+  background-size: cover;
+  background-position-x: 0;
+  background-position-y: 0;
+}
+
+/* METODOLOGIA SECTION */
+
+.metodologia {
+  width: 100vw;
+  height: 100vh;
+  padding: 1rem 4rem;
+  color: var(--main-black);
+  background-color: var(--main-white);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.metodologia_main {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 7.5%;
+  margin: auto 0;
+}
+
+.metodologia_main p {
+  margin: 0;
 }

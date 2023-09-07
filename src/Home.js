@@ -2,10 +2,12 @@ import { useRef } from "react";
 import "./Home.css";
 import SectionTitle from "./components/SectionTitle/SectionTitle";
 import { Link } from "react-router-dom";
+import MetodologiaStep from "./components/MetodologiaStep/MetodologiaStep";
 
 function Home() {
   const aboutSection = useRef();
   const projectsSection = useRef();
+  const metodologiaSection = useRef();
 
   return (
     <div className="Home">
@@ -36,10 +38,12 @@ function Home() {
             </div>
             <div
               onClick={() =>
-                aboutSection.current.scrollIntoView({ behavior: "smooth" })
+                metodologiaSection.current.scrollIntoView({
+                  behavior: "smooth",
+                })
               }
             >
-              <p>How I work</p>
+              <p>Method</p>
             </div>
             <div
               onClick={() =>
@@ -183,6 +187,36 @@ function Home() {
               <p>004</p>
             </div>
           </div>
+        </div>
+      </section>
+      <section ref={metodologiaSection} className="metodologia">
+        <SectionTitle title="Method"></SectionTitle>
+        <div className="metodologia_main">
+          <MetodologiaStep
+            number={1}
+            title="Briefing"
+            description="We have a meeting where we meet each other and we start to understand
+          the requirements of the project, the problems and the solutions :)"
+            emojis={["👋", "🌱", "🤝"]}
+          ></MetodologiaStep>
+          <MetodologiaStep
+            number={2}
+            title="Proposal"
+            description="I propose different designs and I check with you if that's ok. Once you validate the design vibe and ideas, I'll make a final design to show yo how it would look like."
+            emojis={["👋", "🌱", "🤝"]}
+          ></MetodologiaStep>
+          <MetodologiaStep
+            number={3}
+            title="Crafting"
+            description="I code the website delivering weekly updates so you can give me feedback and see how it's going. In this stage, I should receive the necessary content for the web."
+            emojis={["👋", "🌱", "🤝"]}
+          ></MetodologiaStep>
+          <MetodologiaStep
+            number={4}
+            title="Handoff"
+            description="I put the web online and hand you over the documentation and the source code. We have an exit meeting where I'll explain you everyting and solve any doubt."
+            emojis={["👋", "🌱", "🤝"]}
+          ></MetodologiaStep>
         </div>
       </section>
     </div>
