@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import "./Home.css";
 import SectionTitle from "./components/SectionTitle/SectionTitle";
 import { Link } from "react-router-dom";
@@ -16,6 +16,8 @@ function Home() {
   const metodologiaSection = useRef();
   const firstMethod = useRef();
   const servicesSection = useRef();
+
+  const [service, setService] = useState("front");
 
   useEffect(() => {
     firstMethod.current.click();
@@ -252,12 +254,142 @@ function Home() {
         <div className="services_main">
           <div className="words">
             <p>
-              <span>✺ FRONTEND DEVELOPMENT●</span>{" "}
-              <span>FULLSTACK DEVELOPMENT ✲</span> <span>▲SERVICE DESIGN</span>{" "}
-              <span>UX/UI DESIGN◉</span> <span>COPYWRITTING</span>
+              <span
+                className={service === "front" && "selected"}
+                onClick={() => setService("front")}
+              >
+                ✺ FRONTEND DEVELOPMENT●
+              </span>{" "}
+              <span
+                className={service === "fullstack" && "selected"}
+                onClick={() => setService("fullstack")}
+              >
+                FULLSTACK DEVELOPMENT ✲
+              </span>{" "}
+              <span
+                className={service === "service" && "selected"}
+                onClick={() => setService("service")}
+              >
+                ▲SERVICE DESIGN
+              </span>{" "}
+              <span>UX/UI DESIGN◉</span>{" "}
+              <span
+                className={service === "copy" && "selected"}
+                onClick={() => setService("copy")}
+              >
+                COPYWRITTING
+              </span>
             </p>
           </div>
-          <div className="packages"></div>
+          <div className="packages">
+            <div className="book_call_btns">
+              <a
+                href="https://cal.com/vicentegarcya/welcome-meeting"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <p>
+                  Book a Call{" "}
+                  <span>
+                    <i>(it's free)</i>
+                  </span>
+                </p>
+                <p>
+                  Book a Call{" "}
+                  <span>
+                    <i>(it's free)</i>
+                  </span>
+                </p>
+              </a>
+              <a
+                href="https://cal.com/vicentegarcya/welcome-meeting"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <p>
+                  Book a Call{" "}
+                  <span>
+                    <i>(click me)</i>
+                  </span>
+                </p>
+                <p>
+                  Book a Call{" "}
+                  <span>
+                    <i>(click me)</i>
+                  </span>
+                </p>
+              </a>
+              <a
+                href="https://cal.com/vicentegarcya/welcome-meeting"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <p>
+                  Book a Call{" "}
+                  <span>
+                    <i>(click me)</i>
+                  </span>
+                </p>
+                <p>
+                  Book a Call{" "}
+                  <span>
+                    <i>(click me)</i>
+                  </span>
+                </p>
+              </a>
+            </div>
+            {service === "front" && (
+              <div className="front_packages">
+                <p>
+                  <i>prices starting at 800€</i>
+                </p>
+                <div></div>
+                <p>Product Landing Page</p>
+                <p>Corporate Web</p>
+                <p>Professional Portfolio</p>
+                <p>Interactive Experience</p>
+                <p>Browser Game</p>
+                <p>HTML Email Templates</p>
+              </div>
+            )}
+            {service === "fullstack" && (
+              <div className="fullstack_packages">
+                <p>
+                  <i>prices starting at 4500€</i>
+                </p>
+                <div></div>
+                <p>Ecommerce</p>
+                <p>Web App</p>
+                <p>Wordpress CSM</p>
+                <p>Internal Application</p>
+                <p>Custom Functionalities</p>
+              </div>
+            )}
+            {service === "service" && (
+              <div className="service_packages">
+                <p>
+                  <i>prices starting at 3000€</i>
+                </p>
+                <div></div>
+                <p>Loren Ipsum haha</p>
+                <p>Loren Ipsum</p>
+                <p>Loren Ipsum he</p>
+                <p>Loren Ipsum dfsdfsd</p>
+              </div>
+            )}
+            {service === "copy" && (
+              <div className="copy_packages">
+                <p>
+                  <i>prices starting at 300€</i>
+                </p>
+                <div></div>
+                <p>Creative Copywriting</p>
+                <p>Brand Storytelling</p>
+                <p>SocialAds Copywriting</p>
+                <p>Content Creation</p>
+              </div>
+            )}
+          </div>
         </div>
       </section>
     </div>

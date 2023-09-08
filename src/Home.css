@@ -432,6 +432,119 @@
   line-height: 1;
 }
 
+.services_main > .words span {
+  transition: all 0.1s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+
+.services_main > .words span.selected {
+  background-color: var(--main-highlight-color) !important;
+  color: var(--main-black) !important;
+}
+
+.services_main > .words span:hover {
+  cursor: pointer;
+  background: var(--main-black);
+  color: var(--main-white);
+  transition: all 0.1s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+
+.services_main > .words span:nth-child(4) {
+  cursor: text;
+  background: var(--main-white);
+  color: var(--main-black);
+}
+
 .services_main > .packages {
   width: 50%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.services_main .packages > div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.services_main .packages > div > p {
+  width: 180px;
+  text-align: start;
+  font-size: 18px;
+}
+
+.services_main .packages > div > p:first-child {
+  font-family: var(--auxiliar-font);
+  text-align: end;
+  padding-bottom: 5px;
+}
+
+.services_main .packages > div > div {
+  border-bottom: 1px solid var(--main-black);
+  width: 250px;
+  margin-bottom: 20px;
+}
+
+.services_main .packages a {
+  border: 1px solid var(--main-black);
+  padding: 0.5rem 2.5rem;
+  border-radius: 30px;
+  color: var(--main-black);
+  background-color: transparent;
+  transition: all 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  font-size: 1.3rem;
+  font-family: 'Neue-Montreal-Book';
+  margin-bottom: 5px;
+  width: 180px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.services_main .packages a:hover {
+  background: var(--main-black);
+  color: var(--main-white);
+  cursor: pointer;
+}
+
+.services_main .packages a > p {
+  display: inline-block;
+  animation: scrollText 10s 2s infinite linear;
+}
+
+.services_main .packages a:not(:first-child) > p {
+  display: inline-block;
+  animation: scrollText2 10s 2s infinite linear;
+}
+
+.services_main .packages a > p:nth-child(1) {
+  margin-right: 2.5rem;
+}
+
+.services_main .packages a span {
+  font-family: var(--auxiliar-font);
+}
+
+.services_main .packages a:not(:first-child) > p:first-child {
+  margin-right: 2.3rem;
+}
+
+@keyframes scrollText {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(calc(-170px - 2.5rem));
+  }
+}
+
+@keyframes scrollText2 {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(calc(-172px - 2.5rem));
+  }
 }
