@@ -15,7 +15,7 @@
 
 @font-face {
   font-family: "Editorial-New-Light";
-  src: local("Editorial-New-Reg"),
+  src: local("Editorial-New-Light"),
     url("./fonts/EditorialNew/PPEditorialNew-Ultralight.otf") format('opentype');
 }
 

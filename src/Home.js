@@ -6,18 +6,25 @@ import MetodologiaStep from "./components/MetodologiaStep/MetodologiaStep";
 
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import Footer from "./components/Footer/Footer";
 
 function Home() {
   gsap.registerPlugin(ScrollTrigger);
 
   const welcomeWrapper = useRef();
+  const welcomeContentRef = useRef();
   const aboutSection = useRef();
   const projectsSection = useRef();
   const metodologiaSection = useRef();
   const firstMethod = useRef();
   const servicesSection = useRef();
+  const footerRef = useRef();
 
   const [service, setService] = useState("front");
+
+  function scrollToTop() {
+    welcomeContentRef.current.scrollIntoView({ behavior: "smooth" });
+  }
 
   useEffect(() => {
     firstMethod.current.click();
@@ -37,13 +44,29 @@ function Home() {
         },
       }
     );
+
+    gsap.fromTo(
+      footerRef.current,
+      {
+        height: 0
+      },
+      {
+        height: "104.75vh",
+        scrollTrigger: {
+          trigger: servicesSection.current,
+          start: "bottom 85%",
+          end: '+=75%',
+          scrub: true,
+        },
+      }
+    );
   }, []);
 
   return (
     <div className="Home">
       <section className="welcome">
         <div ref={welcomeWrapper} className="welcome_wrapper"></div>
-        <div className="welcome_content">
+        <div ref={welcomeContentRef} className="welcome_content">
           <div className="welcome_content_left">
             <p>
               Vicente Garcya. Creative <span>Web Developer</span> &{" "}
@@ -392,6 +415,10 @@ function Home() {
           </div>
         </div>
       </section>
+      <section className="footer_fake"></section>
+      <div ref={footerRef} className="footer_wrapper">
+        <Footer scrollTop={scrollToTop}></Footer>
+      </div>
     </div>
   );
 }

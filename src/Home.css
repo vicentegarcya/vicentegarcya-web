@@ -116,6 +116,14 @@
   font-size: 2vw;
 }
 
+.about_text > p {
+  margin: 1.5rem 0;
+}
+
+.about_text > p:last-child {
+  margin-bottom: 0;
+}
+
 .about_bubbles {
   width: 50%;
   height: 60%;
@@ -262,6 +270,7 @@
   color: var(--main-white);
   transform: translateY(-20px);
   transition: all 0.3s cubic-bezier(0.77, 0, 0.175, 1);
+  font-size: 0.65rem;
 }
 
 .video_wrapper {
@@ -536,7 +545,7 @@
     transform: translateX(0%);
   }
   to {
-    transform: translateX(calc(-170px - 2.5rem));
+    transform: translateX(calc(-176px - 2.3rem));
   }
 }
 
@@ -547,4 +556,20 @@
   to {
     transform: translateX(calc(-172px - 2.5rem));
   }
+}
+
+/* FOOTER */
+
+.footer_wrapper {
+  width: 100vw;
+  height: 0;
+  overflow: hidden;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.footer_fake {
+  width: 100vw;
+  height: 75vh;
 }
