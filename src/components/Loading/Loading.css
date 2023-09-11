@@ -1,0 +1,35 @@
+.loading {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999999;
+}
+
+.loading_circle {
+  width: 100vw;
+  height: 100vw;
+  background: radial-gradient(
+    circle,
+    rgba(116, 157, 251, 0) 8%,
+    var(--main-white) 8%,
+    var(--main-white) 100%
+  );
+  animation: circleGrowing 5s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+@keyframes circleGrowing {
+  0% {
+    scale: 1;
+  }
+  50% {
+    scale: 2;
+  }
+  100% {
+    scale: 20;
+  }
+}

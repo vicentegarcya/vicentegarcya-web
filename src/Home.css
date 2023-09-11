@@ -4,7 +4,7 @@
   z-index: 1;
 }
 
-.Home > section:nth-child(n+3) {
+.Home > section:nth-child(n + 3) {
   position: relative;
 }
 
@@ -28,6 +28,7 @@
   left: 0;
   width: 100vw;
   height: 100vh;
+  opacity: 0.25;
 }
 
 .welcome_content {
@@ -37,20 +38,33 @@
   padding-top: 100px;
 }
 
+.welcome_content_left {
+  width: 60%;
+  overflow: hidden;
+}
+
 .welcome_content_left p {
   font-size: 7.25vw;
-  line-height: 1.05;
+  line-height: 1;
   position: relative;
   z-index: 2;
   margin: 0;
+  display: block;
+  animation: reveal 1s cubic-bezier(0.77, 0, 0.175, 1) 0.5s;
+  animation-delay: 3.7s;
+}
+
+@keyframes reveal {
+  0% {
+    transform: translate(0, 100%);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
 }
 
 .welcome_content_left p span {
   font-family: "Editorial-New-Light";
-}
-
-.welcome_content_left {
-  width: 60%;
 }
 
 .welcome_content_right {
@@ -58,28 +72,45 @@
   display: flex;
   flex-direction: column;
   margin-bottom: 3vh;
+  font-family: var(--auxiliar-font);
 }
 
 .welcome_content_right > div {
-  position: relative;
   width: 100%;
-  height: 38px;
+  height: 60px;
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  overflow: hidden;
-  transition: height 0.4s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  position: relative;
 }
 
 .welcome_content_right > div:hover {
   cursor: pointer;
-  transition: all 0.4s ease-in-out;
-  height: 80px;
 }
 
 .welcome_content_right > div > p {
-  font-size: 42px;
+  font-size: 32px;
   text-align: end;
+}
+
+.welcome_content_right .drawing_circle {
+  position: absolute;
+  
+  right: -10px;
+  width: 120px;
+  height: 100px;
+  stroke-dasharray: 1589;
+  animation: drawingCircle 1.5s linear;
+  animation-delay: 3.8s;
+}
+
+@keyframes drawingCircle {
+  0% {
+    stroke-dashoffset: 1589;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
 }
 
 .welcome_content_right > div > p:nth-child(1) {
@@ -505,7 +536,7 @@
   background-color: transparent;
   transition: all 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95);
   font-size: 1.3rem;
-  font-family: 'Neue-Montreal-Book';
+  font-family: "Neue-Montreal-Book";
   margin-bottom: 5px;
   width: 180px;
   white-space: nowrap;
