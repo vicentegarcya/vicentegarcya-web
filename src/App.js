@@ -9,19 +9,17 @@ import Post4 from "./posts/Post4";
 import Post5 from "./posts/Post5";
 import Header from "./components/Header/Header";
 import { useEffect, useState } from "react";
-import Loading from "./components/Loading/Loading";
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    setTimeout(() => setIsLoading(false), 4000);
+    setTimeout(() => setIsLoading(false), 500);
   }, []);
 
   return (
     <div className="App">
-      {isLoading && <Loading></Loading>}
-      <Header></Header>
+      <Header isLoading={isLoading}></Header>
       <Routes>
         <Route path="/" element={<Home isLoading={isLoading} />} />
         <Route path="/bitacora" element={<Bitacora />} />

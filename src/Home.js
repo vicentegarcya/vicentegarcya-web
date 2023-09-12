@@ -11,7 +11,6 @@ import Footer from "./components/Footer/Footer";
 function Home({ isLoading }) {
   gsap.registerPlugin(ScrollTrigger);
 
-  const welcomeWrapper = useRef();
   const welcomeContentRef = useRef();
   const aboutSection = useRef();
   const projectsSection = useRef();
@@ -30,16 +29,32 @@ function Home({ isLoading }) {
     /* ANIMATIONS */
 
     gsap.fromTo(
-      welcomeWrapper.current,
-      {
-        opacity: 0.55,
-      },
+      aboutSection.current.querySelector('.about_text'),
       {
         opacity: 0,
+      },
+      {
+        opacity: 1,
         scrollTrigger: {
-          trigger: welcomeWrapper.current,
-          start: "bottom 95%",
-          end: "bottom end",
+          trigger: aboutSection.current,
+          start: "50% bottom",
+          end: "+=90%",
+          scrub: true,
+        },
+      }
+    );
+
+    gsap.fromTo(
+      aboutSection.current.querySelector('.about_bubbles'),
+      {
+        scale: 0,
+      },
+      {
+        scale: 1,
+        scrollTrigger: {
+          trigger: aboutSection.current,
+          start: "50% bottom",
+          end: "+=50%",
           scrub: true,
         },
       }
@@ -65,113 +80,126 @@ function Home({ isLoading }) {
   return (
     <div className="Home">
       <section className="welcome">
-        <div ref={welcomeWrapper} className="welcome_wrapper"></div>
+        {/* <div ref={welcomeWrapper} className="welcome_wrapper"></div> */}
         <div ref={welcomeContentRef} className="welcome_content">
           <div
             className="welcome_content_left"
             style={{ maxHeight: isLoading ? 0 : "fit-content" }}
           >
             <p>
-              Vicente Garcya. Creative <span>Web Developer</span> &{" "}
-              <span>Digital</span> Experience <span>Crafter</span>.
+              Creative web developer and designer crafting digital experiences
+              for heart-driven brands. I believe in the power of building and
+              growing together ☺︎
             </p>
           </div>
           <div className="welcome_content_right">
-            {/* <div
-              onClick={() =>
-                aboutSection.current.scrollIntoView({ behavior: "smooth" })
-              }
-            >
-              <svg
-                className="drawing_circle"
-                width="664"
-                height="271"
-                viewBox="0 0 664 271"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M242.132 11.5428C222.082 9.31499 203.673 8.95366 183.287 11.7674C122.438 20.1664 32.4042 43.0787 7.31395 108.12C-14.2732 164.081 50.071 198.419 91.4262 214.131C147.256 235.342 242.881 252.248 299.405 258.826C357.557 265.594 461.312 271.194 521.982 264.666C579.346 258.493 636.21 241.914 656.068 182.687C683.636 100.468 595.19 64.1305 532.539 43.7728C444.807 15.2658 352.78 3.33725 260.774 3.00807C236.352 2.92069 206.463 3.36382 183.512 13.5642"
-                  stroke="black"
-                  stroke-width="5"
-                  stroke-linecap="round"
-                />
-              </svg>
-              <p>About</p>
-            </div> */}
+            {!isLoading && <div className="welcome_image"></div>}
             <div
-              onClick={() =>
-                projectsSection.current.scrollIntoView({ behavior: "smooth" })
-              }
+              className="welcome_content_right_links"
+              style={{ maxHeight: isLoading ? 0 : "fit-content" }}
             >
-              <svg
-                className="drawing_circle"
-                width="664"
-                height="271"
-                viewBox="0 0 664 271"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
+              <div
+                onClick={() =>
+                  aboutSection.current.scrollIntoView({ behavior: "smooth" })
+                }
+                style={{ height: isLoading ? 0 : "fit-content" }}
               >
-                <path
-                  d="M242.132 11.5428C222.082 9.31499 203.673 8.95366 183.287 11.7674C122.438 20.1664 32.4042 43.0787 7.31395 108.12C-14.2732 164.081 50.071 198.419 91.4262 214.131C147.256 235.342 242.881 252.248 299.405 258.826C357.557 265.594 461.312 271.194 521.982 264.666C579.346 258.493 636.21 241.914 656.068 182.687C683.636 100.468 595.19 64.1305 532.539 43.7728C444.807 15.2658 352.78 3.33725 260.774 3.00807C236.352 2.92069 206.463 3.36382 183.512 13.5642"
-                  stroke="black"
-                  stroke-width="5"
-                  stroke-linecap="round"
-                />
-              </svg>
-              <p>Projects</p>
-            </div>
-            <div
-              onClick={() =>
-                metodologiaSection.current.scrollIntoView({
-                  behavior: "smooth",
-                })
-              }
-            >
-              <svg
-                className="drawing_circle"
-                width="664"
-                height="271"
-                viewBox="0 0 664 271"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
+                <p>
+                  About<span>(1)</span>
+                </p>
+                <p>
+                  About<span>(1)</span>
+                </p>
+                <p>
+                  About<span>(1)</span>
+                </p>
+                <p>
+                  About<span>(1)</span>
+                </p>
+                <p>
+                  About<span>(1)</span>
+                </p>
+              </div>
+              <div
+                onClick={() =>
+                  projectsSection.current.scrollIntoView({ behavior: "smooth" })
+                }
+                style={{ height: isLoading ? 0 : "fit-content" }}
               >
-                <path
-                  d="M242.132 11.5428C222.082 9.31499 203.673 8.95366 183.287 11.7674C122.438 20.1664 32.4042 43.0787 7.31395 108.12C-14.2732 164.081 50.071 198.419 91.4262 214.131C147.256 235.342 242.881 252.248 299.405 258.826C357.557 265.594 461.312 271.194 521.982 264.666C579.346 258.493 636.21 241.914 656.068 182.687C683.636 100.468 595.19 64.1305 532.539 43.7728C444.807 15.2658 352.78 3.33725 260.774 3.00807C236.352 2.92069 206.463 3.36382 183.512 13.5642"
-                  stroke="black"
-                  stroke-width="5"
-                  stroke-linecap="round"
-                />
-              </svg>
-              <p>Method</p>
-            </div>
-            <div
-              onClick={() =>
-                servicesSection.current.scrollIntoView({ behavior: "smooth" })
-              }
-            >
-              <svg
-                className="drawing_circle"
-                width="664"
-                height="271"
-                viewBox="0 0 664 271"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
+                <p>
+                  Works<span>(2)</span>
+                </p>
+                <p>
+                  Works<span>(2)</span>
+                </p>
+                <p>
+                  Works<span>(2)</span>
+                </p>
+                <p>
+                  Works<span>(2)</span>
+                </p>
+                <p>
+                  Works<span>(2)</span>
+                </p>
+              </div>
+              <div
+                onClick={() =>
+                  metodologiaSection.current.scrollIntoView({
+                    behavior: "smooth",
+                  })
+                }
+                style={{ height: isLoading ? 0 : "fit-content" }}
               >
-                <path
-                  d="M242.132 11.5428C222.082 9.31499 203.673 8.95366 183.287 11.7674C122.438 20.1664 32.4042 43.0787 7.31395 108.12C-14.2732 164.081 50.071 198.419 91.4262 214.131C147.256 235.342 242.881 252.248 299.405 258.826C357.557 265.594 461.312 271.194 521.982 264.666C579.346 258.493 636.21 241.914 656.068 182.687C683.636 100.468 595.19 64.1305 532.539 43.7728C444.807 15.2658 352.78 3.33725 260.774 3.00807C236.352 2.92069 206.463 3.36382 183.512 13.5642"
-                  stroke="black"
-                  stroke-width="5"
-                  stroke-linecap="round"
-                />
-              </svg>
-              <p>Services</p>
+                <p>
+                  Method<span>(3)</span>
+                </p>
+                <p>
+                  Method<span>(3)</span>
+                </p>
+                <p>
+                  Method<span>(3)</span>
+                </p>
+                <p>
+                  Method<span>(3)</span>
+                </p>
+                <p>
+                  Method<span>(3)</span>
+                </p>
+              </div>
+              <div
+                onClick={() =>
+                  servicesSection.current.scrollIntoView({ behavior: "smooth" })
+                }
+                style={{ height: isLoading ? 0 : "fit-content" }}
+              >
+                <p>
+                  Services<span>(4)</span>
+                </p>
+                <p>
+                  Services<span>(4)</span>
+                </p>
+                <p>
+                  Services<span>(4)</span>
+                </p>
+                <p>
+                  Services<span>(4)</span>
+                </p>
+                <p>
+                  Services<span>(4)</span>
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </section>
       <section ref={aboutSection} className="about">
-        <SectionTitle title="About"></SectionTitle>
+        <SectionTitle
+          title={
+            <p>
+              About<span>(1)</span>
+            </p>
+          }
+        ></SectionTitle>
         <div className="about_main">
           <div className="about_text">
             <p>
@@ -243,7 +271,13 @@ function Home({ isLoading }) {
         </div>
       </section>
       <section ref={projectsSection} className="projects">
-        <SectionTitle title="Selected Projects"></SectionTitle>
+        <SectionTitle
+          title={
+            <p>
+              Selected Works<span>(2)</span>
+            </p>
+          }
+        ></SectionTitle>
         <div className="projects_grid">
           <div>
             <div className="keywords">
@@ -305,7 +339,13 @@ function Home({ isLoading }) {
         </div>
       </section>
       <section ref={metodologiaSection} className="metodologia">
-        <SectionTitle title="Method"></SectionTitle>
+        <SectionTitle
+          title={
+            <p>
+              Method<span>(3)</span>
+            </p>
+          }
+        ></SectionTitle>
         <div className="metodologia_main">
           <MetodologiaStep
             ref={firstMethod}
@@ -336,7 +376,13 @@ function Home({ isLoading }) {
         </div>
       </section>
       <section ref={servicesSection} className="services">
-        <SectionTitle title="Services"></SectionTitle>
+        <SectionTitle
+          title={
+            <p>
+              Services<span>(4)</span>
+            </p>
+          }
+        ></SectionTitle>
         <div className="services_main">
           <div className="words">
             <p>
