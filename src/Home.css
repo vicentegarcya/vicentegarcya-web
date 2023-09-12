@@ -512,6 +512,37 @@
   margin: auto;
 }
 
+.metodologia_line {
+  width: 100%;
+  height: 1px;
+  background-color: var(--main-black);
+  z-index: 4;
+}
+
+.metodologia_main > div:nth-child(2) {
+  background-color: var(--main-white);
+  z-index: 6;
+}
+
+.metodologia_main > div:nth-child(3) {
+  background-color: var(--main-white);
+  z-index: 5;
+}
+
+.metodologia_main > div:nth-child(4) {
+  background-color: var(--main-white);
+  z-index: 4;
+}
+
+.metodologia_main > div:nth-child(5) {
+  background-color: var(--main-white);
+  z-index: 3;
+}
+
+.metodologia_main > div:nth-child(n+2) {
+  border-bottom: 1px solid var(--main-black);
+}
+
 .metodologia_main p {
   margin: 0;
 }

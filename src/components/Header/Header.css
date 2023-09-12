@@ -20,10 +20,6 @@
   animation: revealHeader 1s cubic-bezier(0.77, 0, 0.175, 1) 0.5s;
 }
 
-.header_folded > a {
-  mix-blend-mode: difference !important;
-}
-
 @keyframes revealHeader {
   0% {
     transform: translate(0, -200%);

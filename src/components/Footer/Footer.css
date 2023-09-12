@@ -1,7 +1,7 @@
 .footer {
   width: 100vw;
   height: 104vh;
-  padding: 3rem 4rem 0 4rem;
+  padding: 0rem 4rem 0 4rem;
   background-color: var(--main-black);
   color: var(--main-white);
   display: flex;
@@ -11,6 +11,8 @@
   overflow: hidden;
   position: relative;
   z-index: 9999;
+  font-size: 30px;
+  font-family: "Neue-Montreal-Regular";
 }
 
 .footer_top {
@@ -21,53 +23,40 @@
   justify-content: space-between;
 }
 
-.footer_top > * {
-  width: calc(33.3% - 4rem);
+.footer_top > div:nth-child(1) {
+  align-self: flex-start;
 }
 
 .footer_top > div a {
-  font-family: var(--auxiliar-font);
   color: var(--main-white);
-  font-size: 1.5rem;
-}
-
-.footer_top > p {
-  font-family: var(--auxiliar-font);
-  font-size: 2.3rem;
-  margin: 0 2% 0 0;
-  text-align: end;
+  transition: all 0.3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
 }
 
 .footer_top > div:first-child button {
-  border: 1px solid var(--main-white);
-  padding: 0.5rem 2.5rem;
-  border-radius: 30px;
+  border: none;
   color: var(--main-white);
+  font-size: 30px;
   background-color: transparent;
   transition: all 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95);
-  font-size: 1.5rem;
-  font-family: "Neue-Montreal-Book";
-  margin-bottom: 5px;
-  white-space: nowrap;
-  overflow: hidden;
+  font-family: "Neue-Montreal-Regular";
 }
 
-.footer_top > div:first-child button:hover {
-  background: var(--main-white);
-  color: var(--main-black);
+.footer_top > div:first-child button > span {
+  font-size: 20px;
+  position: absolute;
+}
+
+.footer_top > div:first-child button:hover, .footer_top > div a:hover {
+  color: #f8f8f8b3;
   cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
 }
 
-.footer_top > div:last-child {
+.footer_top > div {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   justify-content: space-between;
-}
-
-.footer_top > div:last-child > * {
-  margin-bottom: 10px;
-  font-size: 2em;
 }
 
 .footer_bottom {
@@ -75,7 +64,7 @@
   width: calc(100% + 8rem);
   transform: scaleY(1.2);
   margin: 0 !important;
-  margin-bottom: 1vh !important;
+  font-family: var(--main-font);
 }
 
 .footer_bottom a {

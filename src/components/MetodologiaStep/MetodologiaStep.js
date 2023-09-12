@@ -8,6 +8,7 @@ const MetodologiaStep = forwardRef(function MetodologiaStep({
   title,
   description,
   emojis,
+  time
 }, ref) {
   const [isDesplegado, setIsDesplegado] = useState(false);
 
@@ -50,6 +51,7 @@ const MetodologiaStep = forwardRef(function MetodologiaStep({
         </p>
         <p>{description}</p>
       </animated.div>
+      <p><i>{time}</i></p>
       <animated.div style={emojisStyle}>
         {emojis.map((emoji, index) => {
           return <div key={index}>{emoji}</div>;

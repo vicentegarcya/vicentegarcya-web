@@ -4,7 +4,6 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  border-top: 1px solid var(--main-black);
   padding: 2%;
   overflow-y: hidden;
 }
@@ -15,12 +14,13 @@
 
 .metodologia_step > div > p:nth-child(1) {
   font-size: 25px;
-  font-family: "Neue-Montreal-Book";
+  font-family: "Neue-Montreal-Regular";
   margin-bottom: 40px;
 }
 
 .metodologia_step > div > p:nth-child(2) {
   font-size: 20px;
+  letter-spacing: 0.02em;
 }
 
 .metodologia_step > div > p > span {
@@ -30,23 +30,34 @@
 }
 
 .metodologia_step > div:nth-child(1) {
-  width: 40%;
+  width: 35%;
   transition: all 1.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-.metodologia_step > div:nth-child(2) {
+.metodologia_step > p {
+  width: 20%;
+  display: flex;
+  flex-direction: row;
+  justify-content:flex-end;
+  margin-right: 8%;
+  margin-top: 5px;
+  font-family: var(--auxiliar-font);
+  font-size: 20px;
+  letter-spacing: normal;
+}
+
+.metodologia_step > div:nth-child(3) {
   width: 8%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin-left: 23%;
 }
 
-.metodologia_step > div:nth-child(2) > div {
+.metodologia_step > div:nth-child(3) > div {
   font-size: 25px;
 }
 
-.metodologia_step > div:nth-child(3) {
+.metodologia_step > div:nth-child(4) {
   width: 20px;
   height: 20px;
   background-image: url("../../images/x.png");
@@ -55,7 +66,7 @@
   transition: all 2s cubic-bezier(0.175, 0.885, 0.32, 1);
 }
 
-.metodologia_step > div:nth-child(3):hover {
+.metodologia_step > div:nth-child(4):hover {
     scale: 1.2;
     transition: all 1s cubic-bezier(0.165, 0.84, 0.44, 1);
 }

@@ -6,25 +6,42 @@ export default function Footer({ scrollTop }) {
     <div className="footer">
       <div className="footer_top">
         <div>
-          <button onClick={() => scrollTop()}>Back to Top</button>
+          <button onClick={() => scrollTop()}>
+            back to top<span>(click)</span>
+          </button>
         </div>
-        <p>Let's create together</p>
         <div>
+          <p>+34 684 003 481</p>
           <a
-            href="https://www.instagram.com/vicentegarcya/"
-            target="_blank"
-            rel="noreferrer"
+            style={{ textAlign: "end" }}
+            href="mailto:vicentegarciaayllon@gmail.com"
           >
-            Instagram
+            vicentegarciaayllon@gmail.com
           </a>
-          <a
-            href="https://www.linkedin.com/in/vicentegarcya/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Linkedin
-          </a>
+          <div>
+            <a
+              style={{ marginRight: "10px" }}
+              href="https://www.instagram.com/vicentegarcya/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Instagram,
+            </a>
+            <a
+              href="https://www.linkedin.com/in/vicentegarcya/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Linkedin
+            </a>
+          </div>
+        </div>
+        <div>
+          <p style={{ textAlign: "end" }}>
+            -2.1361500<br></br>40.0749200
+          </p>
           <Link to={"/bitacora"}>Bitácora</Link>
+          <p>© 2023</p>
         </div>
       </div>
       <div className="footer_bottom">

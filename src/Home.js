@@ -15,6 +15,7 @@ function Home({ isLoading }) {
   const aboutSection = useRef();
   const projectsSection = useRef();
   const metodologiaSection = useRef();
+  const methodLineRef = useRef();
   const firstMethod = useRef();
   const servicesSection = useRef();
   const footerRef = useRef();
@@ -45,8 +46,8 @@ function Home({ isLoading }) {
           scrollTrigger: {
             trigger: aboutSection.current,
             start: "50% bottom",
-            end: "+=90%",
-            scrub: true,
+            end: "+=40%",
+            scrub: 2,
           },
         }
       )
@@ -63,7 +64,7 @@ function Home({ isLoading }) {
           trigger: aboutSection.current,
           start: "50% bottom",
           end: "+=50%",
-          scrub: true,
+          scrub: 2,
         },
       }
     );
@@ -73,16 +74,16 @@ function Home({ isLoading }) {
       jimenaRef.current,
       {
         scale: 0,
-        x: -400
+        x: -400,
       },
       {
         scale: 1,
-        x:0,
+        x: 0,
         scrollTrigger: {
           trigger: projectsSection.current,
           start: "20% bottom",
           end: "+=50%",
-          scrub: true,
+          scrub: 2,
         },
       }
     );
@@ -91,16 +92,16 @@ function Home({ isLoading }) {
       bosRef.current,
       {
         scale: 0,
-        x: 400
+        x: 400,
       },
       {
         scale: 1,
-        x:0,
+        x: 0,
         scrollTrigger: {
           trigger: projectsSection.current,
           start: "30% bottom",
           end: "+=40%",
-          scrub: true,
+          scrub: 2,
         },
       }
     );
@@ -109,19 +110,20 @@ function Home({ isLoading }) {
       elonRef.current,
       {
         scale: 0,
-        y: 400
+        y: 400,
       },
       {
         scale: 1,
-        y:0,
+        y: 0,
         scrollTrigger: {
           trigger: projectsSection.current,
           start: "70% bottom",
           end: "+=40%",
-          scrub: true,
+          scrub: 2,
         },
       }
     );
+
     gsap.fromTo(
       senseatRef.current,
       {
@@ -133,7 +135,76 @@ function Home({ isLoading }) {
           trigger: projectsSection.current,
           start: "70% bottom",
           end: "+=40%",
-          scrub: true,
+          scrub: 2,
+        },
+      }
+    );
+
+    /* METHOD */
+    gsap.from(methodLineRef.current, {
+      scaleX: 0,
+      duration: 2,
+      transformOrigin: "left center",
+      ease: "power2.inOut",
+      scrollTrigger: {
+        trigger: metodologiaSection.current,
+        start: "10% bottom",
+        end: "+=40%",
+        scrub: 3,
+      },
+    });
+
+    gsap.fromTo(
+      metodologiaSection.current.querySelector(
+        ".metodologia_main > div:nth-child(3)"
+      ),
+      {
+        yPercent: -100,
+      },
+      {
+        yPercent: 0,
+        scrollTrigger: {
+          trigger: metodologiaSection.current,
+          onEnter: () => setTimeout(() => firstMethod.current.click(), 1000),
+          start: "40% bottom",
+          end: "+=40%",
+          scrub: 2,
+        },
+      }
+    );
+
+    gsap.fromTo(
+      metodologiaSection.current.querySelector(
+        ".metodologia_main > div:nth-child(4)"
+      ),
+      {
+        yPercent: -200,
+      },
+      {
+        yPercent: 0,
+        scrollTrigger: {
+          trigger: metodologiaSection.current,
+          start: "45% bottom",
+          end: "+=40%",
+          scrub: 2,
+        },
+      }
+    );
+
+    gsap.fromTo(
+      metodologiaSection.current.querySelector(
+        ".metodologia_main > div:nth-child(5)"
+      ),
+      {
+        yPercent: -300,
+      },
+      {
+        yPercent: 0,
+        scrollTrigger: {
+          trigger: metodologiaSection.current,
+          start: "50% bottom",
+          end: "+=40%",
+          scrub: 2,
         },
       }
     );
@@ -151,17 +222,17 @@ function Home({ isLoading }) {
           trigger: servicesSection.current,
           start: "bottom 85%",
           end: "+=75%",
-          scrub: true,
+          scrub: 2,
         },
       }
     );
   }, []);
 
   return (
-    <div className="Home">
+    <div ref={welcomeContentRef} className="Home">
       <section className="welcome">
         {/* <div ref={welcomeWrapper} className="welcome_wrapper"></div> */}
-        <div ref={welcomeContentRef} className="welcome_content">
+        <div className="welcome_content">
           <div
             className="welcome_content_left"
             style={{ maxHeight: isLoading ? 0 : "fit-content" }}
@@ -427,6 +498,7 @@ function Home({ isLoading }) {
           }
         ></SectionTitle>
         <div className="metodologia_main">
+          <div ref={methodLineRef} className="metodologia_line"></div>
           <MetodologiaStep
             ref={firstMethod}
             number={1}
@@ -434,24 +506,28 @@ function Home({ isLoading }) {
             description="We have a meeting where we meet each other and we understand
           the requirements of the project, the problems and the solutions :)"
             emojis={["✨", "🌱", "📬"]}
+            time={"2-3 days"}
           ></MetodologiaStep>
           <MetodologiaStep
             number={2}
             title="Proposal"
             description="I propose different designs and I check with you if that's ok. Once you validate the design vibe and ideas, I'll make a final design to show yo how it would look like."
             emojis={["💻", "💍", "🤝"]}
+            time={"3-4 days"}
           ></MetodologiaStep>
           <MetodologiaStep
             number={3}
             title="Crafting"
             description="I code the website delivering weekly updates so you can give me feedback and see how it's going. In this stage, I should receive the necessary content for the web."
             emojis={["🎩", "💡", "👨🏻‍🎨"]}
+            time={"depends on the project"}
           ></MetodologiaStep>
           <MetodologiaStep
             number={4}
             title="Handoff"
             description="I put the web online and hand you over the documentation and the source code. We have an exit meeting where I'll explain you everyting and solve any doubt."
             emojis={["📦", "📓", "❤️"]}
+            time={"1-2 days"}
           ></MetodologiaStep>
         </div>
       </section>
