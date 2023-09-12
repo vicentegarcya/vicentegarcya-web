@@ -19,6 +19,11 @@ function Home({ isLoading }) {
   const servicesSection = useRef();
   const footerRef = useRef();
 
+  const jimenaRef = useRef();
+  const bosRef = useRef();
+  const elonRef = useRef();
+  const senseatRef = useRef();
+
   const [service, setService] = useState("front");
 
   function scrollToTop() {
@@ -27,25 +32,28 @@ function Home({ isLoading }) {
 
   useEffect(() => {
     /* ANIMATIONS */
+    /* ABOUT */
 
-    gsap.fromTo(
-      aboutSection.current.querySelector('.about_text'),
-      {
-        opacity: 0,
-      },
-      {
-        opacity: 1,
-        scrollTrigger: {
-          trigger: aboutSection.current,
-          start: "50% bottom",
-          end: "+=90%",
-          scrub: true,
+    gsap
+      .fromTo(
+        aboutSection.current.querySelector(".about_text"),
+        {
+          opacity: 0,
         },
-      }
-    );
+        {
+          opacity: 1,
+          scrollTrigger: {
+            trigger: aboutSection.current,
+            start: "50% bottom",
+            end: "+=90%",
+            scrub: true,
+          },
+        }
+      )
+      .timeScale(5);
 
     gsap.fromTo(
-      aboutSection.current.querySelector('.about_bubbles'),
+      aboutSection.current.querySelectorAll(".about_bubbles > *"),
       {
         scale: 0,
       },
@@ -59,6 +67,78 @@ function Home({ isLoading }) {
         },
       }
     );
+
+    /* PROJECTS */
+    gsap.fromTo(
+      jimenaRef.current,
+      {
+        scale: 0,
+        x: -400
+      },
+      {
+        scale: 1,
+        x:0,
+        scrollTrigger: {
+          trigger: projectsSection.current,
+          start: "20% bottom",
+          end: "+=50%",
+          scrub: true,
+        },
+      }
+    );
+
+    gsap.fromTo(
+      bosRef.current,
+      {
+        scale: 0,
+        x: 400
+      },
+      {
+        scale: 1,
+        x:0,
+        scrollTrigger: {
+          trigger: projectsSection.current,
+          start: "30% bottom",
+          end: "+=40%",
+          scrub: true,
+        },
+      }
+    );
+
+    gsap.fromTo(
+      elonRef.current,
+      {
+        scale: 0,
+        y: 400
+      },
+      {
+        scale: 1,
+        y:0,
+        scrollTrigger: {
+          trigger: projectsSection.current,
+          start: "70% bottom",
+          end: "+=40%",
+          scrub: true,
+        },
+      }
+    );
+    gsap.fromTo(
+      senseatRef.current,
+      {
+        scale: 0,
+      },
+      {
+        scale: 1,
+        scrollTrigger: {
+          trigger: projectsSection.current,
+          start: "70% bottom",
+          end: "+=40%",
+          scrub: true,
+        },
+      }
+    );
+
+    /* FOOTER */
 
     gsap.fromTo(
       footerRef.current,
@@ -217,55 +297,55 @@ function Home({ isLoading }) {
             </p>
           </div>
           <div className="about_bubbles">
-            <Link to={"/bitacora"}>My Writings</Link>
+            <Link to={"/bitacora"}>my writings</Link>
             <a
               href="https://savee.it/vicentegarcya/"
               target="_blank"
               rel="noreferrer"
             >
-              Inspo
+              inspo
             </a>
             <a
               href="https://mailchi.mp/cad3bc2e7c34/despertar-creativo"
               target="_blank"
               rel="noreferrer"
             >
-              Newsletter Fav
+              newsletter fav
             </a>
             <a
               href="https://open.spotify.com/playlist/5GWpa19ufMdY94SDjBQwA7?si=1d868ff17cc2468e"
               target="_blank"
               rel="noreferrer"
             >
-              My Playlist
+              playlist
             </a>
             <a
               href="https://www.disney.es/peliculas/soul"
               target="_blank"
               rel="noreferrer"
             >
-              Movie Fav
+              movie fav
             </a>
             <a
               href="https://www.britannica.com/plant/daisy"
               target="_blank"
               rel="noreferrer"
             >
-              My Flower
+              flower fav
             </a>
             <a
               href="https://open.spotify.com/playlist/5GWpa19ufMdY94SDjBQwA7?si=1d868ff17cc2468e"
               target="_blank"
               rel="noreferrer"
             >
-              My Playlist
+              prueba
             </a>
             <a
               href="https://open.spotify.com/playlist/5GWpa19ufMdY94SDjBQwA7?si=1d868ff17cc2468e"
               target="_blank"
               rel="noreferrer"
             >
-              My Playlist
+              prueba
             </a>
           </div>
         </div>
@@ -279,7 +359,7 @@ function Home({ isLoading }) {
           }
         ></SectionTitle>
         <div className="projects_grid">
-          <div>
+          <div ref={jimenaRef}>
             <div className="keywords">
               <div className="video_wrapper"></div>
               <p>Corporate Website</p>
@@ -289,11 +369,11 @@ function Home({ isLoading }) {
               <p>GSAP</p>
             </div>
             <div>
-              <p>jimenagonzalez.in</p>
               <p>001</p>
+              <p>jimenagonzalez.in</p>
             </div>
           </div>
-          <div>
+          <div ref={bosRef}>
             <div className="keywords">
               <div className="video_wrapper"></div>
               <p>Product Landing Page</p>
@@ -307,7 +387,7 @@ function Home({ isLoading }) {
               <p>002</p>
             </div>
           </div>
-          <div>
+          <div ref={elonRef}>
             <div className="keywords">
               <div className="video_wrapper"></div>
               <p>Browser Game</p>
@@ -321,7 +401,7 @@ function Home({ isLoading }) {
               <p>003</p>
             </div>
           </div>
-          <div>
+          <div ref={senseatRef}>
             <div className="keywords">
               <div className="video_wrapper"></div>
               <p>Web App</p>
