@@ -238,8 +238,9 @@ function Home({ isLoading }) {
             style={{ maxHeight: isLoading ? 0 : "fit-content" }}
           >
             <p>
-              Creative <span>web developer</span> and designer crafting digital experiences
-              for <span>heart-driven brands</span>. I believe in the power of building and <span>growing together</span> ☺︎
+              Creative <span>web developer</span> and designer crafting digital
+              experiences for <span>heart-driven brands</span>. I believe in the
+              power of building and <span>growing together</span> ☺︎
             </p>
           </div>
           <div className="welcome_content_right">
@@ -367,13 +368,12 @@ function Home({ isLoading }) {
             </p>
           </div>
           <div className="about_bubbles">
-            <Link to={"/bitacora"}>my writings</Link>
+            <Link to={"/bitacora"}></Link>
             <a
               href="https://savee.it/vicentegarcya/"
               target="_blank"
               rel="noreferrer"
             >
-              inspo
             </a>
             <a
               href="https://mailchi.mp/cad3bc2e7c34/despertar-creativo"
@@ -387,21 +387,28 @@ function Home({ isLoading }) {
               target="_blank"
               rel="noreferrer"
             >
-              playlist
+              <iframe
+                title="spotify-frame"
+                style={{ borderRadius: "12px !important", border: "none" }}
+                src="https://open.spotify.com/embed/playlist/5GWpa19ufMdY94SDjBQwA7?utm_source=generator&theme=0"
+                width="100%"
+                height="85%"
+                allowfullscreen=""
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                loading="lazy"
+              ></iframe>
             </a>
             <a
               href="https://www.disney.es/peliculas/soul"
               target="_blank"
               rel="noreferrer"
             >
-              movie fav
             </a>
             <a
               href="https://www.britannica.com/plant/daisy"
               target="_blank"
               rel="noreferrer"
-            >
-            </a>
+            ></a>
             <a
               href="https://open.spotify.com/playlist/5GWpa19ufMdY94SDjBQwA7?si=1d868ff17cc2468e"
               target="_blank"
