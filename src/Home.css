@@ -23,7 +23,7 @@
 }
 
 .welcome_content_left p {
-  font-family: 'Neue-Montreal-Regular';
+  font-family: "Neue-Montreal-Regular";
   font-size: 30px;
   line-height: 0.95;
   position: relative;
@@ -32,6 +32,33 @@
   display: block;
   animation: reveal 1s cubic-bezier(0.77, 0, 0.175, 1) 0.5s;
   padding-bottom: 10px;
+}
+
+.welcome_content_left p > span {
+  position: relative;
+}
+
+.welcome_content_left p > span:after {
+  position: absolute;
+    height: 20px;
+    margin: 0 auto;
+    content: '';
+    left: 0;
+    right: 0;
+    background-color: var(--main-highlight-color);
+    left: 0;
+    bottom: 4px;
+    z-index: -1;
+    animation: highlight 1.5s cubic-bezier(0.77, 0, 0.175, 1) 0.75s;
+}
+
+@keyframes highlight {
+  0%{
+    max-width: 0%
+  }
+  100%{
+    max-width: 100%;
+  }
 }
 
 @keyframes reveal {
@@ -47,7 +74,7 @@
   width: 100%;
   display: flex;
   flex-direction: row;
-  font-family: 'Neue-Montreal-Regular';
+  font-family: "Neue-Montreal-Regular";
   margin-top: 20px;
 }
 
@@ -172,7 +199,7 @@
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
-  font-family: 'Neue-Montreal-Regular';
+  font-family: "Neue-Montreal-Regular";
 }
 
 .about_text {
@@ -191,90 +218,65 @@
 }
 
 .about_bubbles {
-  width: 50%;
-  height: 60%;
+  width: 42%;
+  aspect-ratio: 1/1;
   position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(20, 1fr);
+  grid-template-rows: repeat(20, 1fr);
 }
 
 .about_bubbles > a {
-  font-family: "Editorial-New-Light";
   display: block;
-  width: 100px;
-  height: 100px;
-  border: 1px solid var(--main-black);
-  border-radius: 50%;
   text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
-  position: absolute;
-  bottom: 50%;
-  right: 50%;
-  margin-right: 10px;
-  letter-spacing: normal;
-  transition: opacity 0.3s cubic-bezier(0.77, 0, 0.175, 1), background-color 0.3s cubic-bezier(0.77, 0, 0.175, 1);
 }
 
 .about_bubbles > a:hover {
-  cursor: url('./images/cursor_custom.png') 40 40, pointer;
-  transition: opacity 0.3s cubic-bezier(0.77, 0, 0.175, 1), background-color 0.3s cubic-bezier(0.77, 0, 0.175, 1),;
+  cursor: url("./images/cursor_custom.png") 40 40, pointer;
 }
 
 .about_bubbles > a:nth-child(1) {
-  width: 180px;
-  height: 180px;
-  font-size: 23px;
+  grid-column: 1 / 14;
+  grid-row: 1 / 9;
+  background: var(--main-black);
 }
 .about_bubbles > a:nth-child(2) {
-  width: 116px;
-  height: 116px;
-  transform: translate(70px, 75px);
-  font-size: 18px;
-}
-.about_bubbles > a:nth-child(3) {
-  width: 150px;
-  height: 150px;
-  transform: translate(149px, -25px);
-  font-size: 19px;
-}
-.about_bubbles > a:nth-child(4) {
-  width: 98px;
-  height: 98px;
-  transform: translate(243.5px, -21px);
-  font-size: 15px;
-}
-.about_bubbles > a:nth-child(5) {
-  width: 105px;
-  height: 105px;
-  transform: translate(50px, -150px);
-  font-size: 16px;
-}
-.about_bubbles > a:nth-child(6) {
-  width: 130px;
-  height: 130px;
-  transform: translate(199.5px, 92px);
-  font-size: 17px;
-}
-.about_bubbles > a:nth-child(7) {
-  width: 98px;
-  height: 98px;
-  transform: translate(227.5px, -118px);
-  font-size: 15px;
-}
-.about_bubbles > a:nth-child(8) {
-  width: 100px;
-  height: 100px;
-  transform: translate(147.5px, -173px);
-  font-size: 15px;
+  grid-column: 14 / 21;
+  grid-row: 1 / 12;
+  background: url('./images/savee.webp');
+  background-size: cover;
 }
 
-.about_bubbles:has(a:hover) > a:not(:hover) {
-  opacity: 0.5;
-  transition: opacity 0.3s cubic-bezier(0.77, 0, 0.175, 1), background-color 0.3s cubic-bezier(0.77, 0, 0.175, 1);
+.about_bubbles > a:nth-child(3) {
+  grid-column: 14 / 21;
+  grid-row: 12 / 21;
+  background: palevioletred;
+}
+
+.about_bubbles > a:nth-child(4) {
+  grid-column: 1 / 14;
+  grid-row: 9 / 13;
+  background: grey;
+}
+
+.about_bubbles > a:nth-child(5) {
+  grid-column: 1 / 14;
+  grid-row: 13 / 16;
+  background: olive;
+}
+.about_bubbles > a:nth-child(6) {
+  grid-column: 1 / 8;
+  grid-row: 16 / 21;
+  background: url('./images/margaritas.webp');
+  background-size: cover;
+}
+.about_bubbles > a:nth-child(7) {
+  grid-column: 8 / 14;
+  grid-row: 16 / 21;
+  background: teal;
 }
 
 
@@ -539,7 +541,7 @@
   z-index: 3;
 }
 
-.metodologia_main > div:nth-child(n+2) {
+.metodologia_main > div:nth-child(n + 2) {
   border-bottom: 1px solid var(--main-black);
 }
 

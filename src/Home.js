@@ -238,9 +238,8 @@ function Home({ isLoading }) {
             style={{ maxHeight: isLoading ? 0 : "fit-content" }}
           >
             <p>
-              Creative web developer and designer crafting digital experiences
-              for heart-driven brands. I believe in the power of building and
-              growing together ☺︎
+              Creative <span>web developer</span> and designer crafting digital experiences
+              for <span>heart-driven brands</span>. I believe in the power of building and <span>growing together</span> ☺︎
             </p>
           </div>
           <div className="welcome_content_right">
@@ -402,14 +401,6 @@ function Home({ isLoading }) {
               target="_blank"
               rel="noreferrer"
             >
-              flower fav
-            </a>
-            <a
-              href="https://open.spotify.com/playlist/5GWpa19ufMdY94SDjBQwA7?si=1d868ff17cc2468e"
-              target="_blank"
-              rel="noreferrer"
-            >
-              prueba
             </a>
             <a
               href="https://open.spotify.com/playlist/5GWpa19ufMdY94SDjBQwA7?si=1d868ff17cc2468e"
