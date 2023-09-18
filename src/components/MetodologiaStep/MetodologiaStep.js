@@ -1,16 +1,17 @@
-import { useState } from "react";
 import "./MetodologiaStep.css";
 import { animated, useSpring } from "@react-spring/web";
 import { forwardRef } from "react";
 
-const MetodologiaStep = forwardRef(function MetodologiaStep({
-  number,
-  title,
-  description,
-  emojis,
-  time
-}, ref) {
-  const [isDesplegado, setIsDesplegado] = useState(false);
+const MetodologiaStep = forwardRef(function MetodologiaStep(
+  { number, title, description, isFirst, emojis, isDesplegado },
+  ref
+) {
+  const parentColor = useSpring({
+    from: { backgroundColor: "f8f8f8" },
+    to: {
+      backgroundColor: isDesplegado ? "#e3ffe1" : "f8f8f8",
+    },
+  });
 
   const openAnimation = useSpring({
     from: { maxHeight: "25%", marginBottom: "0rem" },
@@ -37,26 +38,39 @@ const MetodologiaStep = forwardRef(function MetodologiaStep({
   });
 
   return (
-    <div
-      ref={ref}
-      className="metodologia_step"
-      onClick={() => setIsDesplegado(!isDesplegado)}
-    >
+    <animated.div style={parentColor} ref={ref} className="metodologia_step">
       <animated.div style={openAnimation}>
         <p>
-          <span>
-            <i>{number}.</i>
-          </span>{" "}
-          {title}
+          <span>{number}</span> {title}
         </p>
         <p>{description}</p>
       </animated.div>
-      <p><i>{time}</i></p>
-      <animated.div style={emojisStyle}>
-        {emojis.map((emoji, index) => {
-          return <div key={index}>{emoji}</div>;
-        })}
-      </animated.div>
+      {isFirst ? (
+        <a
+          href="https://cal.com/vicentegarcya/welcome-meeting"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <p>
+            Book a Call{" "}
+            <span>
+              <i>(it's free)</i>
+            </span>
+          </p>
+          <p>
+            Book a Call{" "}
+            <span>
+              <i>(it's free)</i>
+            </span>
+          </p>
+        </a>
+      ) : (
+        <animated.div style={emojisStyle}>
+          {emojis.map((emoji, index) => {
+            return <div key={index}>{emoji}</div>;
+          })}
+        </animated.div>
+      )}
       <animated.div
         style={
           !isDesplegado
@@ -64,7 +78,7 @@ const MetodologiaStep = forwardRef(function MetodologiaStep({
             : undefined
         }
       ></animated.div>
-    </div>
+    </animated.div>
   );
 });
 

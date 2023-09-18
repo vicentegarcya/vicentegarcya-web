@@ -15,8 +15,10 @@ function Home({ isLoading }) {
   const aboutSection = useRef();
   const projectsSection = useRef();
   const metodologiaSection = useRef();
-  const methodLineRef = useRef();
   const firstMethod = useRef();
+  const secondMethod = useRef();
+  const thirdMethod = useRef();
+  const fourthMethod = useRef();
   const servicesSection = useRef();
   const footerRef = useRef();
 
@@ -26,12 +28,17 @@ function Home({ isLoading }) {
   const senseatRef = useRef();
 
   const [service, setService] = useState("front");
+  const [isDesplegado, setIsDesplegado] = useState();
 
   function scrollToTop() {
     welcomeContentRef.current.scrollIntoView({ behavior: "smooth" });
   }
 
   useEffect(() => {
+    firstMethod.current.addEventListener('click', () => setIsDesplegado('first'));
+    secondMethod.current.addEventListener('click', () => setIsDesplegado('second'));
+    thirdMethod.current.addEventListener('click', () => setIsDesplegado('third'));
+    fourthMethod.current.addEventListener('click', () => setIsDesplegado('fourth'));
     /* ANIMATIONS */
     /* ABOUT */
 
@@ -141,22 +148,10 @@ function Home({ isLoading }) {
     );
 
     /* METHOD */
-    gsap.from(methodLineRef.current, {
-      scaleX: 0,
-      duration: 2,
-      transformOrigin: "left center",
-      ease: "power2.inOut",
-      scrollTrigger: {
-        trigger: metodologiaSection.current,
-        start: "10% bottom",
-        end: "+=40%",
-        scrub: 3,
-      },
-    });
 
     gsap.fromTo(
       metodologiaSection.current.querySelector(
-        ".metodologia_main > div:nth-child(3)"
+        ".metodologia_main > div:nth-child(2)"
       ),
       {
         yPercent: -100,
@@ -165,17 +160,16 @@ function Home({ isLoading }) {
         yPercent: 0,
         scrollTrigger: {
           trigger: metodologiaSection.current,
-          onEnter: () => setTimeout(() => firstMethod.current.click(), 1000),
           start: "40% bottom",
           end: "+=40%",
-          scrub: 2,
+          scrub: 1,
         },
       }
     );
 
     gsap.fromTo(
       metodologiaSection.current.querySelector(
-        ".metodologia_main > div:nth-child(4)"
+        ".metodologia_main > div:nth-child(3)"
       ),
       {
         yPercent: -200,
@@ -186,25 +180,25 @@ function Home({ isLoading }) {
           trigger: metodologiaSection.current,
           start: "45% bottom",
           end: "+=40%",
-          scrub: 2,
+          scrub: 1,
         },
       }
     );
 
     gsap.fromTo(
       metodologiaSection.current.querySelector(
-        ".metodologia_main > div:nth-child(5)"
+        ".metodologia_main > div:nth-child(4)"
       ),
       {
-        yPercent: -300,
+        yPercent: -250,
       },
       {
         yPercent: 0,
         scrollTrigger: {
           trigger: metodologiaSection.current,
-          start: "50% bottom",
+          start: "47.5% bottom",
           end: "+=40%",
-          scrub: 2,
+          scrub: 1,
         },
       }
     );
@@ -226,7 +220,7 @@ function Home({ isLoading }) {
         },
       }
     );
-  }, []);
+  }, [isDesplegado]);
 
   return (
     <div ref={welcomeContentRef} className="Home">
@@ -368,20 +362,19 @@ function Home({ isLoading }) {
             </p>
           </div>
           <div className="about_bubbles">
-            <Link to={"/bitacora"}></Link>
+            <Link to={"/bitacora"}>blog</Link>
             <a
               href="https://savee.it/vicentegarcya/"
               target="_blank"
               rel="noreferrer"
             >
+              inspo
             </a>
             <a
               href="https://mailchi.mp/cad3bc2e7c34/despertar-creativo"
               target="_blank"
               rel="noreferrer"
-            >
-              newsletter fav
-            </a>
+            ></a>
             <a
               href="https://open.spotify.com/playlist/5GWpa19ufMdY94SDjBQwA7?si=1d868ff17cc2468e"
               target="_blank"
@@ -393,7 +386,6 @@ function Home({ isLoading }) {
                 src="https://open.spotify.com/embed/playlist/5GWpa19ufMdY94SDjBQwA7?utm_source=generator&theme=0"
                 width="100%"
                 height="85%"
-                allowfullscreen=""
                 allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
                 loading="lazy"
               ></iframe>
@@ -403,18 +395,21 @@ function Home({ isLoading }) {
               target="_blank"
               rel="noreferrer"
             >
+              movie fav
             </a>
             <a
-              href="https://www.britannica.com/plant/daisy"
-              target="_blank"
-              rel="noreferrer"
-            ></a>
-            <a
-              href="https://open.spotify.com/playlist/5GWpa19ufMdY94SDjBQwA7?si=1d868ff17cc2468e"
+              href="https://www.alianzaeditorial.es/libro/adn-alianza-de-novelas/el-clamor-de-los-bosques-adn-richard-powers-9788491814443/"
               target="_blank"
               rel="noreferrer"
             >
-              prueba
+              book fav
+            </a>
+            <a
+              href="https://cafeamorperfecto.com/products/frida-kahlo-luisa-guaragna"
+              target="_blank"
+              rel="noreferrer"
+            >
+              coffee fav
             </a>
           </div>
         </div>
@@ -496,36 +491,42 @@ function Home({ isLoading }) {
           }
         ></SectionTitle>
         <div className="metodologia_main">
-          <div ref={methodLineRef} className="metodologia_line"></div>
           <MetodologiaStep
             ref={firstMethod}
-            number={1}
+            number="01"
             title="Briefing"
             description="We have a meeting where we meet each other and we understand
           the requirements of the project, the problems and the solutions :)"
-            emojis={["✨", "🌱", "📬"]}
-            time={"2-3 days"}
+            isFirst={true}
+            isDesplegado={isDesplegado === 'first'}
+            onClick={() => setIsDesplegado('first')}
           ></MetodologiaStep>
           <MetodologiaStep
-            number={2}
+            ref={secondMethod}
+            number="02"
             title="Proposal"
             description="I propose different designs and I check with you if that's ok. Once you validate the design vibe and ideas, I'll make a final design to show yo how it would look like."
-            emojis={["💻", "💍", "🤝"]}
-            time={"3-4 days"}
+            emojis={["💍", "💍", "💍"]}
+            isDesplegado={isDesplegado === 'second'}
+            onClick={() => setIsDesplegado('second')}
           ></MetodologiaStep>
           <MetodologiaStep
-            number={3}
+            ref={thirdMethod}
+            number="03"
             title="Crafting"
             description="I code the website delivering weekly updates so you can give me feedback and see how it's going. In this stage, I should receive the necessary content for the web."
-            emojis={["🎩", "💡", "👨🏻‍🎨"]}
-            time={"depends on the project"}
+            emojis={["💻", "💻", "💻"]}
+            isDesplegado={isDesplegado === 'third'}
+            onClick={() => setIsDesplegado('third')}
           ></MetodologiaStep>
           <MetodologiaStep
-            number={4}
+            ref={fourthMethod}
+            number="04"
             title="Handoff"
             description="I put the web online and hand you over the documentation and the source code. We have an exit meeting where I'll explain you everyting and solve any doubt."
-            emojis={["📦", "📓", "❤️"]}
-            time={"1-2 days"}
+            emojis={["📦", "📦", "📦"]}
+            isDesplegado={isDesplegado === 'fourth'}
+            onClick={() => setIsDesplegado('fourth')}
           ></MetodologiaStep>
         </div>
       </section>
