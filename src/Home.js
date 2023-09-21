@@ -233,8 +233,8 @@ function Home({ isLoading }) {
           >
             <p>
               Creative <span>web developer</span> and designer crafting digital
-              experiences for <span>heart-driven brands</span>. I believe in the
-              power of building and <span>growing together</span> ☺︎
+              experiences for <span>heart-driven people & brands</span>. I believe in the
+              power of <span>building together</span> ☺︎
             </p>
           </div>
           <div className="welcome_content_right">
@@ -495,8 +495,7 @@ function Home({ isLoading }) {
             ref={firstMethod}
             number="01"
             title="Briefing"
-            description="We have a meeting where we meet each other and we understand
-          the requirements of the project, the problems and the solutions :)"
+            description="A quick 15 minute call where we meet each other. Here you can tell me all about the project, as I gather the requirements and start to wrap my head around the challenges and possible solutions."
             isFirst={true}
             isDesplegado={isDesplegado === 'first'}
             onClick={() => setIsDesplegado('first')}
@@ -505,7 +504,7 @@ function Home({ isLoading }) {
             ref={secondMethod}
             number="02"
             title="Proposal"
-            description="I propose different designs and I check with you if that's ok. Once you validate the design vibe and ideas, I'll make a final design to show yo how it would look like."
+            description="I work on a proposal for your project, with scope, budget and timeframe. We explore different ideas for the look & feel and the possible web experience."
             emojis={["💍", "💍", "💍"]}
             isDesplegado={isDesplegado === 'second'}
             onClick={() => setIsDesplegado('second')}
@@ -514,7 +513,7 @@ function Home({ isLoading }) {
             ref={thirdMethod}
             number="03"
             title="Crafting"
-            description="I code the website delivering weekly updates so you can give me feedback and see how it's going. In this stage, I should receive the necessary content for the web."
+            description="Here comes the magic: the designing and coding of your digital experience. We get together on a weekly basis for co-creating and giving feedback in a 1 hour meeting."
             emojis={["💻", "💻", "💻"]}
             isDesplegado={isDesplegado === 'third'}
             onClick={() => setIsDesplegado('third')}
@@ -523,7 +522,7 @@ function Home({ isLoading }) {
             ref={fourthMethod}
             number="04"
             title="Handoff"
-            description="I put the web online and hand you over the documentation and the source code. We have an exit meeting where I'll explain you everyting and solve any doubt."
+            description="Here your web is ready to go live! I put it online and hand you over the source code and documentation. In a 90-minute exit meeting, we go over everything together, as I solve any question that may arise."
             emojis={["📦", "📦", "📦"]}
             isDesplegado={isDesplegado === 'fourth'}
             onClick={() => setIsDesplegado('fourth')}
@@ -596,13 +595,13 @@ function Home({ isLoading }) {
                 <p>
                   Book a Call{" "}
                   <span>
-                    <i>(click me)</i>
+                    <i>(let's meet)</i>
                   </span>
                 </p>
                 <p>
                   Book a Call{" "}
                   <span>
-                    <i>(click me)</i>
+                    <i>(let's meet)</i>
                   </span>
                 </p>
               </a>
@@ -614,13 +613,13 @@ function Home({ isLoading }) {
                 <p>
                   Book a Call{" "}
                   <span>
-                    <i>(click me)</i>
+                    <i>(tell me about your need)</i>
                   </span>
                 </p>
                 <p>
                   Book a Call{" "}
                   <span>
-                    <i>(click me)</i>
+                    <i>(tell me about your need)</i>
                   </span>
                 </p>
               </a>

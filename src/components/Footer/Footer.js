@@ -20,19 +20,18 @@ export default function Footer({ scrollTop }) {
           </a>
           <div>
             <a
-              style={{ marginRight: "10px" }}
               href="https://www.instagram.com/vicentegarcya/"
               target="_blank"
               rel="noreferrer"
             >
-              Instagram,
+              Instagram<span>(click)</span>,
             </a>
             <a
               href="https://www.linkedin.com/in/vicentegarcya/"
               target="_blank"
               rel="noreferrer"
             >
-              Linkedin
+              Linkedin<span>(click)</span>
             </a>
           </div>
         </div>
@@ -40,7 +39,7 @@ export default function Footer({ scrollTop }) {
           <p style={{ textAlign: "end" }}>
             -2.1361500<br></br>40.0749200
           </p>
-          <Link to={"/bitacora"}>Bitácora</Link>
+          <Link to={"/bitacora"}>Bitácora<span>(click)</span></Link>
           <p>© 2023</p>
         </div>
       </div>

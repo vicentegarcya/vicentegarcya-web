@@ -41,9 +41,13 @@
   font-family: "Neue-Montreal-Regular";
 }
 
-.footer_top > div:first-child button > span {
+.footer_top span {
   font-size: 20px;
   position: absolute;
+}
+
+.footer_top a:has(span) {
+  margin-right: 48px;
 }
 
 .footer_top > div:first-child button:hover, .footer_top > div a:hover {
