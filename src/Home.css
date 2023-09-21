@@ -40,14 +40,14 @@
 
 .welcome_content_left p > span:after {
   position: absolute;
-  height: 20px;
+  height: 32px;
   margin: 0 auto;
   content: "";
   left: 0;
   right: 0;
   background-color: var(--main-highlight-color);
   left: 0;
-  bottom: 4px;
+  bottom: -0.5px;
   z-index: -1;
   animation: highlight 1.5s cubic-bezier(0.77, 0, 0.175, 1) 0.75s;
 }
@@ -517,7 +517,7 @@
 
 .metodologia {
   width: 100vw;
-  min-height: 100vh;
+  height: 100vh;
   padding: 3rem 4rem;
   color: var(--main-black);
   background-color: var(--main-white);
@@ -527,58 +527,152 @@
 }
 
 .metodologia_main {
-  width: 96%;
-  height: auto;
+  width: 100%;
+  height: 80%;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: space-between;
-  margin-bottom: 7.5%;
-  margin: auto;
-}
-
-.metodologia_main > div:nth-child(1) > div {
-  margin-top: 4px;
   font-family: "Neue-Montreal-Regular";
 }
 
-.metodologia_main .selected_method {
-  background-color: #e3ffe1 !important;
+.method_left {
+  width: 60%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-right: 15%;
 }
 
-.metodologia_main > div:nth-child(1) {
-  background-color: var(--main-white);
-  z-index: 6;
+.method_left > div:nth-child(1) {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
-.metodologia_main > div:nth-child(2) {
-  background-color: var(--main-white);
-  z-index: 5;
+.method_numbers {
+  display: flex;
+  justify-content: space-between;
 }
 
-.metodologia_main > div:nth-child(3) {
-  background-color: var(--main-white);
-  z-index: 4;
+.method_numbers button {
+  border: none;
+  background: none;
+  color: var(--main-grey);
+  font-size: 82px;
+  font-family: "Neue-Montreal-Regular";
+  padding: 0;
 }
 
-.metodologia_main > div:nth-child(4) {
-  background-color: var(--main-white);
-  z-index: 3;
+.method_numbers button:hover {
+  cursor: pointer;
 }
 
-.metodologia_main > div {
-  border-bottom: 1px solid #282c322a;
-}
-
-.metodologia_main > div:first-child {
-  border-top: 1px solid #282c322a;
-}
-
-.metodologia_main p {
+.method_titles > p {
+  font-size: 82px;
   margin: 0;
+  margin-top: 3%;
 }
 
-.metodologia_step:nth-child(1) > div > p > span {
-  letter-spacing: 2.5px;
+.method_arrows span {
+  font-size: 20px;
+  position: absolute;
+  margin-top: 10px;
+}
+
+.method_arrows {
+  margin-top: 20px;
+}
+
+.method_arrows > div:nth-child(1) {
+  display: flex;
+  width: 99%;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 62px;
+  margin-top: 0;
+}
+
+.method_arrows > div:nth-child(1) > div:hover {
+  cursor: pointer;
+}
+
+.method_arrows > div:nth-child(1) > div {
+  position: relative;
+}
+
+.method_less span {
+  top: 0px;
+  right: 50px;
+}
+.method_plus span {
+  top: 0px;
+  left: 50px;
+}
+
+.method_left > div:nth-child(2) {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.method_left > div:nth-child(2) a {
+  border: 1px solid var(--main-black);
+  padding: 0.5rem 2.5rem;
+  border-radius: 30px;
+  color: var(--main-black);
+  background-color: transparent;
+  transition: all 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  font-size: 1.8rem;
+  font-family: "Neue-Montreal-Book";
+  width: 220px;
+  height: fit-content;
+  white-space: nowrap;
+  overflow: hidden;
+  margin-bottom: 8px;
+}
+
+.method_left > div:nth-child(2) a:hover {
+  background: var(--main-black);
+  color: var(--main-white);
+  cursor: pointer;
+}
+
+.method_left > div:nth-child(2) a > p {
+  display: inline-block;
+  animation: scrollTextMethod 10s 2s infinite linear;
+}
+
+.method_left > div:nth-child(2) a > p:nth-child(1) {
+  margin-right: 2.5rem;
+}
+
+.method_left > div:nth-child(2) a span {
+  font-family: var(--auxiliar-font);
+}
+
+@keyframes scrollTextMethod {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(calc(-100% - 2.5rem));
+  }
+}
+
+.method_right {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  font-size: 30px;
+}
+
+.method_right p {
+  margin: 0;
 }
 
 /* SERVICES SECTION */

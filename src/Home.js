@@ -28,17 +28,25 @@ function Home({ isLoading }) {
   const senseatRef = useRef();
 
   const [service, setService] = useState("front");
-  const [isDesplegado, setIsDesplegado] = useState();
+  const [currentMethod, setCurrentMethod] = useState(1);
 
   function scrollToTop() {
     welcomeContentRef.current.scrollIntoView({ behavior: "smooth" });
   }
 
   useEffect(() => {
-    firstMethod.current.addEventListener('click', () => setIsDesplegado('first'));
-    secondMethod.current.addEventListener('click', () => setIsDesplegado('second'));
-    thirdMethod.current.addEventListener('click', () => setIsDesplegado('third'));
-    fourthMethod.current.addEventListener('click', () => setIsDesplegado('fourth'));
+    /* firstMethod.current.addEventListener("click", () =>
+      setIsDesplegado("first")
+    );
+    secondMethod.current.addEventListener("click", () =>
+      setIsDesplegado("second")
+    );
+    thirdMethod.current.addEventListener("click", () =>
+      setIsDesplegado("third")
+    );
+    fourthMethod.current.addEventListener("click", () =>
+      setIsDesplegado("fourth")
+    ); */
     /* ANIMATIONS */
     /* ABOUT */
 
@@ -149,60 +157,6 @@ function Home({ isLoading }) {
 
     /* METHOD */
 
-    gsap.fromTo(
-      metodologiaSection.current.querySelector(
-        ".metodologia_main > div:nth-child(2)"
-      ),
-      {
-        yPercent: -100,
-      },
-      {
-        yPercent: 0,
-        scrollTrigger: {
-          trigger: metodologiaSection.current,
-          start: "40% bottom",
-          end: "+=40%",
-          scrub: 1,
-        },
-      }
-    );
-
-    gsap.fromTo(
-      metodologiaSection.current.querySelector(
-        ".metodologia_main > div:nth-child(3)"
-      ),
-      {
-        yPercent: -200,
-      },
-      {
-        yPercent: 0,
-        scrollTrigger: {
-          trigger: metodologiaSection.current,
-          start: "45% bottom",
-          end: "+=40%",
-          scrub: 1,
-        },
-      }
-    );
-
-    gsap.fromTo(
-      metodologiaSection.current.querySelector(
-        ".metodologia_main > div:nth-child(4)"
-      ),
-      {
-        yPercent: -250,
-      },
-      {
-        yPercent: 0,
-        scrollTrigger: {
-          trigger: metodologiaSection.current,
-          start: "47.5% bottom",
-          end: "+=40%",
-          scrub: 1,
-        },
-      }
-    );
-
     /* FOOTER */
 
     gsap.fromTo(
@@ -220,7 +174,7 @@ function Home({ isLoading }) {
         },
       }
     );
-  }, [isDesplegado]);
+  }, []);
 
   return (
     <div ref={welcomeContentRef} className="Home">
@@ -233,8 +187,8 @@ function Home({ isLoading }) {
           >
             <p>
               Creative <span>web developer</span> and designer crafting digital
-              experiences for <span>heart-driven people & brands</span>. I believe in the
-              power of <span>building together</span> ☺︎
+              experiences for <span>heart-driven people & brands</span>. I
+              believe in the power of <span>building together</span> ☺︎
             </p>
           </div>
           <div className="welcome_content_right">
@@ -491,14 +445,94 @@ function Home({ isLoading }) {
           }
         ></SectionTitle>
         <div className="metodologia_main">
-          <MetodologiaStep
+          <div className="method_left">
+            <div>
+              <div className="method_numbers">
+                <button style={{ color: "#282c32" }}>01</button>
+                <button>02</button>
+                <button>03</button>
+                <button>04</button>
+              </div>
+              <div className="method_arrows">
+                <div>
+                  <div className="method_plus">
+                    →<span>(next)</span>
+                  </div>
+                  <div className="method_less">
+                    <span>(previous)</span>←
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div className="method_titles">
+                {currentMethod === 1 && <p>Briefing</p>}
+                {currentMethod === 2 && <p>Proposal</p>}
+                {currentMethod === 3 && <p>Crafting</p>}
+                {currentMethod === 4 && <p>Handoff</p>}
+              </div>
+              <a
+                href="https://cal.com/vicentegarcya/welcome-meeting"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <p>
+                  Book a Call{" "}
+                  <span>
+                    <i>(it's free)</i>
+                  </span>
+                </p>
+                <p>
+                  Book a Call{" "}
+                  <span>
+                    <i>(it's free)</i>
+                  </span>
+                </p>
+              </a>
+            </div>
+          </div>
+          <div className="method_right">
+            {currentMethod === 1 && (
+              <p>
+                A quick 15 minute call where we meet each other.<br></br>
+                <br></br> Here you can tell me all about the project, as I
+                gather the requirements and start to wrap my head around the
+                challenges and possible solutions.
+              </p>
+            )}
+            {currentMethod === 2 && (
+              <p>
+                I work on a proposal for your project, with scope, budget and
+                timeframe.<br></br>
+                <br></br> We explore different ideas for the look & feel and the
+                possible web experience.
+              </p>
+            )}
+            {currentMethod === 3 && (
+              <p>
+                Here comes the magic: the designing and coding of your digital
+                experience.<br></br>
+                <br></br> We get together on a weekly basis for co-creating and
+                giving feedback in a 1 hour meeting.
+              </p>
+            )}
+            {currentMethod === 4 && (
+              <p>
+                Your web is ready to go live! I put it online and hand you over
+                the source code and documentation.<br></br>
+                <br></br> In a 90-minute exit meeting, we go over everything
+                together, as I solve any question that may arise.
+              </p>
+            )}
+          </div>
+          {/* <MetodologiaStep
             ref={firstMethod}
             number="01"
             title="Briefing"
             description="A quick 15 minute call where we meet each other. Here you can tell me all about the project, as I gather the requirements and start to wrap my head around the challenges and possible solutions."
             isFirst={true}
-            isDesplegado={isDesplegado === 'first'}
-            onClick={() => setIsDesplegado('first')}
+            isDesplegado={isDesplegado === "first"}
+            onClick={() => setIsDesplegado("first")}
           ></MetodologiaStep>
           <MetodologiaStep
             ref={secondMethod}
@@ -506,8 +540,8 @@ function Home({ isLoading }) {
             title="Proposal"
             description="I work on a proposal for your project, with scope, budget and timeframe. We explore different ideas for the look & feel and the possible web experience."
             emojis={["💍", "💍", "💍"]}
-            isDesplegado={isDesplegado === 'second'}
-            onClick={() => setIsDesplegado('second')}
+            isDesplegado={isDesplegado === "second"}
+            onClick={() => setIsDesplegado("second")}
           ></MetodologiaStep>
           <MetodologiaStep
             ref={thirdMethod}
@@ -515,8 +549,8 @@ function Home({ isLoading }) {
             title="Crafting"
             description="Here comes the magic: the designing and coding of your digital experience. We get together on a weekly basis for co-creating and giving feedback in a 1 hour meeting."
             emojis={["💻", "💻", "💻"]}
-            isDesplegado={isDesplegado === 'third'}
-            onClick={() => setIsDesplegado('third')}
+            isDesplegado={isDesplegado === "third"}
+            onClick={() => setIsDesplegado("third")}
           ></MetodologiaStep>
           <MetodologiaStep
             ref={fourthMethod}
@@ -524,9 +558,9 @@ function Home({ isLoading }) {
             title="Handoff"
             description="Here your web is ready to go live! I put it online and hand you over the source code and documentation. In a 90-minute exit meeting, we go over everything together, as I solve any question that may arise."
             emojis={["📦", "📦", "📦"]}
-            isDesplegado={isDesplegado === 'fourth'}
-            onClick={() => setIsDesplegado('fourth')}
-          ></MetodologiaStep>
+            isDesplegado={isDesplegado === "fourth"}
+            onClick={() => setIsDesplegado("fourth")}
+          ></MetodologiaStep> */}
         </div>
       </section>
       <section ref={servicesSection} className="services">
