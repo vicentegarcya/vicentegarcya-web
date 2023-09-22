@@ -238,7 +238,7 @@
 
 .about_bubbles > a:hover {
   cursor: url("./images/cursor_custom.png") 40 40, pointer;
-  transition: all 0.5s cubic-bezier(0.215, 0.610, 0.355, 1) !important;
+  transition: all 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) !important;
 }
 
 .about_bubbles > a:nth-child(1) {
@@ -572,7 +572,6 @@
 .method_titles > p {
   font-size: 82px;
   margin: 0;
-  margin-top: 3%;
 }
 
 .method_arrows span {
@@ -591,7 +590,7 @@
   align-items: center;
   justify-content: space-between;
   font-size: 62px;
-  margin-top: 0;
+  margin-top: 25px;
 }
 
 .method_arrows > div:nth-child(1) > div:hover {
@@ -602,13 +601,31 @@
   position: relative;
 }
 
+.method_plus {
+  background: url("./images/up-right-arrow.png");
+  background-size: cover;
+  transform: rotate(45deg);
+  width: 40px;
+  height: 40px;
+}
+
+.method_less {
+  background: url("./images/up-right-arrow.png");
+  background-size: cover;
+  transform: rotate(225deg);
+  width: 40px;
+  height: 40px;
+}
+
 .method_less span {
-  top: 0px;
-  right: 50px;
+  top: -40px;
+  left: 43px;
+  transform: rotate(-225deg);
 }
 .method_plus span {
-  top: 0px;
-  left: 50px;
+  bottom: 60px;
+  left: 20px;
+  transform: rotate(-45deg);
 }
 
 .method_left > div:nth-child(2) {
@@ -621,17 +638,16 @@
 .method_left > div:nth-child(2) a {
   border: 1px solid var(--main-black);
   padding: 0.5rem 2.5rem;
-  border-radius: 30px;
+  border-radius: 60px;
   color: var(--main-black);
-  background-color: transparent;
+  background-color: var(--main-highlight-color);
   transition: all 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95);
-  font-size: 1.8rem;
+  font-size: 3rem;
   font-family: "Neue-Montreal-Book";
-  width: 220px;
+  width: 300px;
   height: fit-content;
   white-space: nowrap;
   overflow: hidden;
-  margin-bottom: 8px;
 }
 
 .method_left > div:nth-child(2) a:hover {
@@ -667,12 +683,32 @@
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: space-between;
   font-size: 30px;
+  margin-top: 0.5%;
+  overflow: hidden;
 }
 
 .method_right p {
   margin: 0;
+}
+
+.method_right > p {
+  line-height: 1.1;
+  animation: reveal 1s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.method_titles > p {
+  animation: revealLeft 1s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+@keyframes revealLeft {
+  0% {
+    transform: translate(-100%, 0);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
 }
 
 /* SERVICES SECTION */

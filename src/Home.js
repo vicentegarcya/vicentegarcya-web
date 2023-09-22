@@ -15,12 +15,13 @@ function Home({ isLoading }) {
   const aboutSection = useRef();
   const projectsSection = useRef();
   const metodologiaSection = useRef();
+  const servicesSection = useRef();
+  const footerRef = useRef();
+
   const firstMethod = useRef();
   const secondMethod = useRef();
   const thirdMethod = useRef();
   const fourthMethod = useRef();
-  const servicesSection = useRef();
-  const footerRef = useRef();
 
   const jimenaRef = useRef();
   const bosRef = useRef();
@@ -35,18 +36,6 @@ function Home({ isLoading }) {
   }
 
   useEffect(() => {
-    /* firstMethod.current.addEventListener("click", () =>
-      setIsDesplegado("first")
-    );
-    secondMethod.current.addEventListener("click", () =>
-      setIsDesplegado("second")
-    );
-    thirdMethod.current.addEventListener("click", () =>
-      setIsDesplegado("third")
-    );
-    fourthMethod.current.addEventListener("click", () =>
-      setIsDesplegado("fourth")
-    ); */
     /* ANIMATIONS */
     /* ABOUT */
 
@@ -156,6 +145,67 @@ function Home({ isLoading }) {
     );
 
     /* METHOD */
+
+    gsap.fromTo(
+      firstMethod.current,
+      {
+        scale: 0,
+      },
+      {
+        scale: 1,
+        scrollTrigger: {
+          trigger: metodologiaSection.current,
+          start: "40% bottom",
+          end: "+=40%",
+          scrub: 1,
+        },
+      }
+    );
+    gsap.fromTo(
+      secondMethod.current,
+      {
+        scale: 0,
+      },
+      {
+        scale: 1,
+        scrollTrigger: {
+          trigger: metodologiaSection.current,
+          start: "40% bottom",
+          end: "+=40%",
+          scrub: 3,
+        },
+      }
+    );
+    gsap.fromTo(
+      thirdMethod.current,
+      {
+        scale: 0,
+      },
+      {
+        scale: 1,
+        scrollTrigger: {
+          trigger: metodologiaSection.current,
+          start: "40% bottom",
+          end: "+=40%",
+          scrub: 5,
+        },
+      }
+    );
+    gsap.fromTo(
+      fourthMethod.current,
+      {
+        scale: 0,
+      },
+      {
+        scale: 1,
+        scrollTrigger: {
+          trigger: metodologiaSection.current,
+          start: "40% bottom",
+          end: "+=40%",
+          scrub: 7,
+        },
+      }
+    );
 
     /* FOOTER */
 
@@ -448,29 +498,61 @@ function Home({ isLoading }) {
           <div className="method_left">
             <div>
               <div className="method_numbers">
-                <button style={{ color: "#282c32" }}>01</button>
-                <button>02</button>
-                <button>03</button>
-                <button>04</button>
+                <button
+                  ref={firstMethod}
+                  style={{ color: currentMethod === 1 ? "#282c32" : "#dbdbdb" }}
+                  onClick={() => setCurrentMethod(1)}
+                >
+                  01
+                </button>
+                <button
+                ref={secondMethod}
+                  style={{ color: currentMethod === 2 ? "#282c32" : "#dbdbdb" }}
+                  onClick={() => setCurrentMethod(2)}
+                >
+                  02
+                </button>
+                <button
+                ref={thirdMethod}
+                  style={{ color: currentMethod === 3 ? "#282c32" : "#dbdbdb" }}
+                  onClick={() => setCurrentMethod(3)}
+                >
+                  03
+                </button>
+                <button
+                ref={fourthMethod}
+                  style={{ color: currentMethod === 4 ? "#282c32" : "#dbdbdb" }}
+                  onClick={() => setCurrentMethod(4)}
+                >
+                  04
+                </button>
               </div>
               <div className="method_arrows">
                 <div>
-                  <div className="method_plus">
-                    →<span>(next)</span>
+                  <div
+                    className="method_plus"
+                    onClick={() => {
+                      if (currentMethod < 4) {
+                        setCurrentMethod(currentMethod + 1);
+                      }
+                    }}
+                  >
+                    <span>(next)</span>
                   </div>
-                  <div className="method_less">
-                    <span>(previous)</span>←
+                  <div
+                    className="method_less"
+                    onClick={() => {
+                      if (currentMethod > 1) {
+                        setCurrentMethod(currentMethod - 1);
+                      }
+                    }}
+                  >
+                    <span>(previous)</span>
                   </div>
                 </div>
               </div>
             </div>
             <div>
-              <div className="method_titles">
-                {currentMethod === 1 && <p>Briefing</p>}
-                {currentMethod === 2 && <p>Proposal</p>}
-                {currentMethod === 3 && <p>Crafting</p>}
-                {currentMethod === 4 && <p>Handoff</p>}
-              </div>
               <a
                 href="https://cal.com/vicentegarcya/welcome-meeting"
                 target="_blank"
@@ -492,6 +574,12 @@ function Home({ isLoading }) {
             </div>
           </div>
           <div className="method_right">
+            <div className="method_titles">
+              {currentMethod === 1 && <p>Briefing</p>}
+              {currentMethod === 2 && <p>Proposal</p>}
+              {currentMethod === 3 && <p>Crafting</p>}
+              {currentMethod === 4 && <p>Handoff</p>}
+            </div>
             {currentMethod === 1 && (
               <p>
                 A quick 15 minute call where we meet each other.<br></br>
@@ -525,42 +613,6 @@ function Home({ isLoading }) {
               </p>
             )}
           </div>
-          {/* <MetodologiaStep
-            ref={firstMethod}
-            number="01"
-            title="Briefing"
-            description="A quick 15 minute call where we meet each other. Here you can tell me all about the project, as I gather the requirements and start to wrap my head around the challenges and possible solutions."
-            isFirst={true}
-            isDesplegado={isDesplegado === "first"}
-            onClick={() => setIsDesplegado("first")}
-          ></MetodologiaStep>
-          <MetodologiaStep
-            ref={secondMethod}
-            number="02"
-            title="Proposal"
-            description="I work on a proposal for your project, with scope, budget and timeframe. We explore different ideas for the look & feel and the possible web experience."
-            emojis={["💍", "💍", "💍"]}
-            isDesplegado={isDesplegado === "second"}
-            onClick={() => setIsDesplegado("second")}
-          ></MetodologiaStep>
-          <MetodologiaStep
-            ref={thirdMethod}
-            number="03"
-            title="Crafting"
-            description="Here comes the magic: the designing and coding of your digital experience. We get together on a weekly basis for co-creating and giving feedback in a 1 hour meeting."
-            emojis={["💻", "💻", "💻"]}
-            isDesplegado={isDesplegado === "third"}
-            onClick={() => setIsDesplegado("third")}
-          ></MetodologiaStep>
-          <MetodologiaStep
-            ref={fourthMethod}
-            number="04"
-            title="Handoff"
-            description="Here your web is ready to go live! I put it online and hand you over the source code and documentation. In a 90-minute exit meeting, we go over everything together, as I solve any question that may arise."
-            emojis={["📦", "📦", "📦"]}
-            isDesplegado={isDesplegado === "fourth"}
-            onClick={() => setIsDesplegado("fourth")}
-          ></MetodologiaStep> */}
         </div>
       </section>
       <section ref={servicesSection} className="services">
