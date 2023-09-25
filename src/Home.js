@@ -2,7 +2,6 @@ import { useEffect, useRef, useState } from "react";
 import "./Home.css";
 import SectionTitle from "./components/SectionTitle/SectionTitle";
 import { Link } from "react-router-dom";
-import MetodologiaStep from "./components/MetodologiaStep/MetodologiaStep";
 
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
@@ -28,11 +27,20 @@ function Home({ isLoading }) {
   const elonRef = useRef();
   const senseatRef = useRef();
 
+  const servicesBtns = useRef();
+
   const [service, setService] = useState("front");
   const [currentMethod, setCurrentMethod] = useState(1);
 
   function scrollToTop() {
     welcomeContentRef.current.scrollIntoView({ behavior: "smooth" });
+  }
+
+  function servicesCarousel() {
+    setTimeout(() => setService('fullstack'), 5000);
+    setTimeout(() => setService('service'), 10000);
+    setTimeout(() => setService('copy'), 15000);
+    setTimeout(() => setService('front'), 20000);
   }
 
   useEffect(() => {
@@ -203,6 +211,60 @@ function Home({ isLoading }) {
           start: "40% bottom",
           end: "+=40%",
           scrub: 7,
+        },
+      }
+    );
+
+    /* SERVICES */
+
+    gsap.fromTo(
+      servicesBtns.current.querySelectorAll("a"),
+      {
+        scale: 0,
+      },
+      {
+        scale: 1,
+        scrollTrigger: {
+          trigger: servicesSection.current,
+          start: "50% bottom",
+          end: "+=50%",
+          scrub: 2,
+        },
+      }
+    );
+
+    gsap.fromTo(
+      servicesSection.current.querySelectorAll(".packages > .front_packages"),
+      {
+        y: 500,
+      },
+      {
+        y: 0,
+        scrollTrigger: {
+          trigger: servicesSection.current,
+          start: "60% bottom",
+          end: "+=25%",
+          scrub: 2,
+        },
+      }
+    );
+
+    gsap.fromTo(
+      servicesSection.current.querySelector(".words"),
+      {
+        opacity: 0,
+        x: -500,
+      },
+      {
+        opacity: 1,
+        x: 0,
+        scrollTrigger: {
+          trigger: servicesSection.current,
+          start: "50% bottom",
+          end: "+=45%",
+          scrub: 2,
+          onEnter: () => servicesCarousel(),
+          once: true,
         },
       }
     );
@@ -654,7 +716,7 @@ function Home({ isLoading }) {
             </p>
           </div>
           <div className="packages">
-            <div className="book_call_btns">
+            <div ref={servicesBtns} className="book_call_btns">
               <a
                 href="https://cal.com/vicentegarcya/welcome-meeting"
                 target="_blank"

@@ -80,9 +80,6 @@
 
 .footer_bottom a > p {
   display: inline-block;
-}
-
-.footer_bottom a:hover > p {
   animation: scrollText 15s infinite linear;
 }
 

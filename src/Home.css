@@ -685,7 +685,7 @@
   flex-direction: column;
   justify-content: space-between;
   font-size: 30px;
-  margin-top: 0.5%;
+  margin-top: 0.25%;
   overflow: hidden;
 }
 
@@ -768,6 +768,7 @@
   flex-direction: column;
   align-items: flex-end;
   justify-content: space-between;
+  overflow-y: hidden;
 }
 
 .services_main .packages > div {
@@ -775,22 +776,23 @@
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  animation: reveal 1s cubic-bezier(0.77, 0, 0.175, 1);
 }
 
 .services_main .packages > div > p {
   width: 180px;
   text-align: start;
-  font-size: 18px;
+  font-size: 19px;
 }
 
 .services_main .packages > div > p:first-child {
   font-family: var(--auxiliar-font);
-  text-align: end;
+  text-align: start;
   padding-bottom: 5px;
 }
 
 .services_main .packages > div > div {
-  border-bottom: 1px solid var(--main-black);
+  border-bottom: 1px solid #acabab;
   width: 250px;
   margin-bottom: 20px;
 }
@@ -801,7 +803,7 @@
   border-radius: 30px;
   color: var(--main-black);
   background-color: transparent;
-  transition: all 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  transition: background-color 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95), color 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95);
   font-size: 1.3rem;
   font-family: "Neue-Montreal-Book";
   margin-bottom: 5px;
