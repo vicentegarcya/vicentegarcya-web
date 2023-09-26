@@ -440,7 +440,7 @@ function Home({ isLoading }) {
               href="https://mailchi.mp/cad3bc2e7c34/despertar-creativo"
               target="_blank"
               rel="noreferrer"
-            ></a>
+            > </a>
             <a
               href="https://open.spotify.com/playlist/5GWpa19ufMdY94SDjBQwA7?si=1d868ff17cc2468e"
               target="_blank"
@@ -689,26 +689,26 @@ function Home({ isLoading }) {
           <div className="words">
             <p>
               <span
-                className={service === "front" && "selected"}
+                className={service === "front" ? "selected" : undefined}
                 onClick={() => setService("front")}
               >
                 ✺ FRONTEND DEVELOPMENT●
               </span>{" "}
               <span
-                className={service === "fullstack" && "selected"}
+                className={service === "fullstack" ? "selected" : undefined}
                 onClick={() => setService("fullstack")}
               >
                 FULLSTACK DEVELOPMENT ✲
               </span>{" "}
               <span
-                className={service === "service" && "selected"}
+                className={service === "service" ? "selected" : undefined}
                 onClick={() => setService("service")}
               >
                 ▲SERVICE DESIGN
               </span>{" "}
               <span>UX/UI DESIGN◉</span>{" "}
               <span
-                className={service === "copy" && "selected"}
+                className={service === "copy" ? "selected" : undefined}
                 onClick={() => setService("copy")}
               >
                 COPYWRITTING

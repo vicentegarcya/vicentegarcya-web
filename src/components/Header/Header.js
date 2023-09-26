@@ -45,11 +45,11 @@ export default function Header({ isLoading }) {
           </div>
           <div>
             <a
-              href="https://www.instagram.com/vicentegarcya/"
+              href="https://www.linkedin.com/in/vicentegarcya/"
               target="_blank"
               rel="noreferrer"
             >
-              Instagram
+              Linkedin<span>(click)</span>
             </a>
             <p>2023©</p>
           </div>

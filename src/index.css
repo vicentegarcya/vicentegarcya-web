@@ -21,19 +21,19 @@
 @font-face {
   font-family: "Editorial-New-Light";
   src: local("Editorial-New-Light"),
-    url("./fonts/EditorialNew/PPEditorialNew-Ultralight.otf") format('opentype');
+    url("./fonts/EditorialNew/PPEditorialNew-Ultralight.otf") format("opentype");
 }
 
 @font-face {
   font-family: "Editorial-New-Regular";
   src: local("Editorial-New-Reg"),
-    url("./fonts/EditorialNew/PPEditorialNew-Regular.otf") format('opentype');
+    url("./fonts/EditorialNew/PPEditorialNew-Regular.otf") format("opentype");
 }
 
 @font-face {
   font-family: "Editorial-New-Italic";
   src: local("Editorial-New-Italic"),
-    url("./fonts/EditorialNew/PPEditorialNew-Italic.otf") format('opentype');
+    url("./fonts/EditorialNew/PPEditorialNew-Italic.otf") format("opentype");
 }
 
 * {
@@ -62,10 +62,10 @@ body {
   position: relative;
   overflow-x: hidden;
   background-color: var(--main-white);
-  letter-spacing: -.02em;
+  letter-spacing: -0.02em;
 }
 
-body::-webkit-scrollbar{
+body::-webkit-scrollbar {
   display: none;
 }
 
