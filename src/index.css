@@ -1,21 +1,16 @@
 @font-face {
   font-family: "Neue-Montreal-Medium";
-  src: url(../public/fonts/NeueMontreal/PPNeueMontreal-Medium.otf);
+  src: url(../public/fonts/NeueMontreal/ppneuemontreal-medium-webfont.woff) format('woff');
 }
 
 @font-face {
   font-family: "Neue-Montreal-Bold";
-  src: url(../public/fonts/NeueMontreal/NeueMontreal-Regular.otf);
+  src: url(../public/fonts/NeueMontreal/ppneuemontreal-bold-webfont.woff)  format('woff');
 }
 
 @font-face {
   font-family: "Neue-Montreal-Book";
-  src: url(../public/fonts/NeueMontreal/NeueMontreal-Regular.otf);
-}
-
-@font-face {
-  font-family: "Neue-Montreal-Regular";
-  src: url(../public/fonts/NeueMontreal/NeueMontreal-Regular.otf);
+  src: url(../public/fonts/NeueMontreal/ppneuemontreal-book-webfont.woff)  format('woff');
 }
 
 /* @font-face {
