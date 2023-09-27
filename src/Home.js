@@ -711,7 +711,7 @@ function Home({ isLoading }) {
                 className={service === "copy" ? "selected" : undefined}
                 onClick={() => setService("copy")}
               >
-                COPYWRITTING
+                COPYWRITING
               </span>
             </p>
           </div>
@@ -802,13 +802,13 @@ function Home({ isLoading }) {
             {service === "service" && (
               <div className="service_packages">
                 <p>
-                  <i>prices starting at 3000€</i>
+                  <i>prices starting at 400€</i>
                 </p>
                 <div></div>
-                <p>Loren Ipsum haha</p>
-                <p>Loren Ipsum</p>
-                <p>Loren Ipsum he</p>
-                <p>Loren Ipsum dfsdfsd</p>
+                <p>Service Strategy</p>
+                <p>User Experience Design</p>
+                <p>Service and Product Design</p>
+                <p>Project Management</p>
               </div>
             )}
             {service === "copy" && (

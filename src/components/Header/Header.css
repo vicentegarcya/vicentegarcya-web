@@ -152,19 +152,20 @@
 
 @media only screen and (max-width: 768px) {
   .Header {
-    font-size: 20px;
+    font-size: 22px;
   }
 
   .header_folded {
-    padding: 0 1.5rem 0 1.5rem;
+    padding: 0 1.1rem 0 1.1rem;
+    height: 50px;
   }
 
   .header_folded > div:nth-child(2) > a {
-    margin-right: 18%;
+    margin-right: 16%;
   }
 
   .header_folded > div:nth-child(2) > div {
-    margin-right: 10%;
+    margin-right: 11%;
   }
 
   .header_folded > div:nth-child(2) > a > span,
@@ -178,17 +179,19 @@
 
   /* HEADER UNFOLDED */
   .unfolded_links {
-    font-size: 100px;
+    font-size: 97.5px;
     font-family: "Neue-Montreal-Regular";
     line-height: 0.8;
-    bottom: 1rem;
+    bottom: 2rem;
     left: 1rem;
     height: fit-content;
   }
 
+  .header_unfolded {
+    height: 100dvh;
+  }
+
   .header_unfolded > div:nth-child(1) {
-    background: url("../../images/x.png");
-    background-size: cover;
     width: 45px;
     height: 45px;
     position: absolute;

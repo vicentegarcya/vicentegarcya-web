@@ -9,3 +9,16 @@
     position: absolute;
     font-size: 18px;
 }
+
+/* RESPONSIVE MOBILE */
+
+@media only screen and (max-width: 768px) {
+    .SectionTitle {
+        font-size: 22px;
+        margin-top: 3dvh;
+    }
+
+    .SectionTitle span {
+        font-size: 15px;
+    }
+}
