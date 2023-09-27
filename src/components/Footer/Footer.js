@@ -14,9 +14,9 @@ export default function Footer({ scrollTop }) {
           <p>+34 684 003 481</p>
           <a
             style={{ textAlign: "end" }}
-            href="mailto:vicentegarciaayllon@gmail.com"
+            href="mailto:hola@vicentegarcya.com"
           >
-            vicentegarciaayllon@gmail.com
+            hola@vicentegarcya.com
           </a>
           <div>
             <a
@@ -44,11 +44,12 @@ export default function Footer({ scrollTop }) {
         </div>
       </div>
       <div className="footer_bottom">
-        <a href="mailto:vicentegarciaayllon@gmail.com">
+        <a href="mailto:hola@vicentegarcya.com">
           <p>CONTACT☺︎</p>
           <p>CONTACT☺︎</p>
         </a>
       </div>
+      <div>✺ Designed and coded by (you guessed it right) Vicente Garcya.</div>
     </div>
   );
 }

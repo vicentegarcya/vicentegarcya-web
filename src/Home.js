@@ -37,10 +37,10 @@ function Home({ isLoading }) {
   }
 
   function servicesCarousel() {
-    setTimeout(() => setService('fullstack'), 5000);
-    setTimeout(() => setService('service'), 10000);
-    setTimeout(() => setService('copy'), 15000);
-    setTimeout(() => setService('front'), 20000);
+    setTimeout(() => setService("fullstack"), 5000);
+    setTimeout(() => setService("service"), 10000);
+    setTimeout(() => setService("copy"), 15000);
+    setTimeout(() => setService("front"), 20000);
   }
 
   useEffect(() => {
@@ -440,7 +440,9 @@ function Home({ isLoading }) {
               href="https://mailchi.mp/cad3bc2e7c34/despertar-creativo"
               target="_blank"
               rel="noreferrer"
-            > </a>
+            >
+              {" "}
+            </a>
             <a
               href="https://open.spotify.com/playlist/5GWpa19ufMdY94SDjBQwA7?si=1d868ff17cc2468e"
               target="_blank"
@@ -568,21 +570,21 @@ function Home({ isLoading }) {
                   01
                 </button>
                 <button
-                ref={secondMethod}
+                  ref={secondMethod}
                   style={{ color: currentMethod === 2 ? "#282c32" : "#dbdbdb" }}
                   onClick={() => setCurrentMethod(2)}
                 >
                   02
                 </button>
                 <button
-                ref={thirdMethod}
+                  ref={thirdMethod}
                   style={{ color: currentMethod === 3 ? "#282c32" : "#dbdbdb" }}
                   onClick={() => setCurrentMethod(3)}
                 >
                   03
                 </button>
                 <button
-                ref={fourthMethod}
+                  ref={fourthMethod}
                   style={{ color: currentMethod === 4 ? "#282c32" : "#dbdbdb" }}
                   onClick={() => setCurrentMethod(4)}
                 >
@@ -637,10 +639,32 @@ function Home({ isLoading }) {
           </div>
           <div className="method_right">
             <div className="method_titles">
-              {currentMethod === 1 && <p>Briefing</p>}
-              {currentMethod === 2 && <p>Proposal</p>}
-              {currentMethod === 3 && <p>Crafting</p>}
-              {currentMethod === 4 && <p>Handoff</p>}
+              <>
+                {currentMethod === 1 && <p>Briefing</p>}
+                {currentMethod === 2 && <p>Proposal</p>}
+                {currentMethod === 3 && <p>Crafting</p>}
+                {currentMethod === 4 && <p>Handoff</p>}
+                <div>
+                  <a
+                    href="https://cal.com/vicentegarcya/welcome-meeting"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <p>
+                      Book a Call{" "}
+                      <span>
+                        <i>(it's free)</i>
+                      </span>
+                    </p>
+                    <p>
+                      Book a Call{" "}
+                      <span>
+                        <i>(it's free)</i>
+                      </span>
+                    </p>
+                  </a>
+                </div>
+              </>
             </div>
             {currentMethod === 1 && (
               <p>

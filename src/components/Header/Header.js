@@ -15,7 +15,7 @@ export default function Header({ isLoading }) {
           vicentegarcya
         </Link>
         <div className="header_folded_links">
-          <a href="mailto:vicentegarciaayllon@gmail.com">
+          <a href="mailto:hola@vicentegarcya.com">
             contact<span>(click)</span>
           </a>
           <div onClick={() => setIsUnfolded(!isUnfolded)}>
