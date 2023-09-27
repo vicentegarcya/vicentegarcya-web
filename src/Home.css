@@ -23,7 +23,7 @@
 }
 
 .welcome_content_left p {
-  font-family: Neue-Montreal-Regular;
+  font-family: Neue-Montreal-Book;
   font-size: 30px;
   line-height: 0.95;
   position: relative;
@@ -74,7 +74,7 @@
   width: 100%;
   display: flex;
   flex-direction: row;
-  font-family: "Neue-Montreal-Regular";
+  font-family: Neue-Montreal-Book;
   margin-top: 20px;
 }
 
