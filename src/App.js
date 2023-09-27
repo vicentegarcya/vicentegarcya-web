@@ -12,8 +12,6 @@ import Post7 from "./posts/Post7";
 import Header from "./components/Header/Header";
 import { useEffect, useState } from "react";
 
-import "./fonts/NeueMontreal/NeueMontreal-Regular.otf";
-
 function App() {
   const [isLoading, setIsLoading] = useState(true);
 
