@@ -1,4 +1,4 @@
-@font-face {
+/* @font-face {
   font-family: Neue-Montreal-Medium;
   src: url("../src/fonts/NeueMontreal/PPNeueMontreal-Medium.otf");
 }
@@ -11,14 +11,14 @@
 @font-face {
   font-family: Neue-Montreal-Book;
   src: url("../src/fonts/NeueMontreal/PPNeueMontreal-Book.otf");
-}
+} */
 
 @font-face {
   font-family: "Neue-Montreal-Regular";
-  src: url("../src/fonts/NeueMontreal/NeueMontreal-Regular.otf");
+  src: url(../public/fonts/NeueMontreal/NeueMontreal-Regular.otf);
 }
 
-@font-face {
+/* @font-face {
   font-family: Editorial-New-Light;
   src: url("../src/fonts/EditorialNew/PPEditorialNew-Ultralight.otf");
 }
@@ -26,7 +26,7 @@
 @font-face {
   font-family: "Editorial-New-Italic";
   src: url("../src/fonts/EditorialNew/PPEditorialNew-UltralightItalic.otf");
-}
+} */
 
 * {
   box-sizing: border-box;
