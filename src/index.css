@@ -5,23 +5,28 @@
 
 @font-face {
   font-family: "Neue-Montreal-Bold";
-  src: url(../public/fonts/NeueMontreal/ppneuemontreal-bold-webfont.woff)  format('woff');
+  src: url(../public/fonts/NeueMontreal/ppneuemontreal-bold-webfont.woff) format('woff');
 }
 
 @font-face {
   font-family: "Neue-Montreal-Book";
-  src: url(../public/fonts/NeueMontreal/ppneuemontreal-book-webfont.woff)  format('woff');
-}
-
-/* @font-face {
-  font-family: Editorial-New-Light;
-  src: url("../src/fonts/EditorialNew/PPEditorialNew-Ultralight.otf");
+  src: url(../public/fonts/NeueMontreal/ppneuemontreal-book-webfont.woff) format('woff');
 }
 
 @font-face {
-  font-family: "Editorial-New-Italic";
-  src: url("../src/fonts/EditorialNew/PPEditorialNew-UltralightItalic.otf");
-} */
+  font-family: "Neue-Montreal-Regular";
+  src: url(../public/fonts/NeueMontreal/neuemontreal-regular-webfont.woff) format('woff');
+}
+
+@font-face {
+  font-family: Editorial-New-Light;
+  src: url(../public/fonts/EditorialNew/ppeditorialnew-ultralight-webfont.woff) format('woff');
+}
+
+@font-face {
+  font-family: Editorial-New-Italic;
+  src: url(../public/fonts/EditorialNew/ppeditorialnew-ultralightitalic-webfont.woff) format('woff');
+}
 
 * {
   box-sizing: border-box;
