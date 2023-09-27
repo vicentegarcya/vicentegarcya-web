@@ -79,7 +79,7 @@
 }
 
 .welcome_image {
-  background: url("../src/images/welcome_image.webp");
+  background: url("../src/images/welcome_image.jpg");
   background-size: cover;
   background-position-y: -90px;
   width: 56.5%;
