@@ -802,12 +802,11 @@ function Home({ isLoading }) {
                   <i>prices starting at 800€</i>
                 </p>
                 <div></div>
-                <p>Product Landing Page</p>
+                <p>Landing Pages</p>
                 <p>Corporate Web</p>
                 <p>Professional Portfolio</p>
                 <p>Interactive Experience</p>
-                <p>Browser Game</p>
-                <p>HTML Email Templates</p>
+                <p>Web App</p>
               </div>
             )}
             {service === "fullstack" && (
