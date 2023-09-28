@@ -153,6 +153,7 @@
 @media only screen and (max-width: 768px) {
   .Header {
     font-size: 22px;
+    margin-top: 10px;
   }
 
   .header_folded {

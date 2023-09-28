@@ -890,6 +890,7 @@
 
   .welcome {
     height: 100vh;
+    margin-bottom: 20px;
   }
 
   .welcome_content {
