@@ -157,7 +157,6 @@
 
   .header_folded {
     padding: 0 1.1rem 0 1.1rem;
-    height: 50px;
   }
 
   .header_folded > div:nth-child(2) > a {
@@ -179,8 +178,8 @@
 
   /* HEADER UNFOLDED */
   .unfolded_links {
-    font-size: 97.5px;
-    font-family: "Neue-Montreal-Regular";
+    font-size: 96px;
+    font-family: "Neue-Montreal-Medium";
     line-height: 0.8;
     bottom: 2rem;
     left: 1rem;

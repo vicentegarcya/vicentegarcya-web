@@ -889,7 +889,7 @@
   /* WELCOME SECTION */
 
   .welcome {
-    height: 100dvh;
+    height: 100vh;
   }
 
   .welcome_content {
@@ -907,6 +907,7 @@
 
   .welcome_content_left p > span:after {
     height: 22px;
+    bottom: 2px;
   }
 
   .welcome_content_right {
@@ -1029,6 +1030,9 @@
 
   .about_bubbles > a:nth-child(4) > iframe {
     height: 95%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .about_bubbles > a:nth-child(5) {
@@ -1282,7 +1286,7 @@
     overflow: hidden;
     display: block;
     margin: 0;
-    margin-top: 11px;
+    margin-top: 8px;
   }
 
   .method_titles > div > a > p:nth-child(1) {
@@ -1307,7 +1311,7 @@
 
   .services {
     width: 100vw;
-    height: 100dvh;
+    height: 100vh;
   }
 
   .services_main {

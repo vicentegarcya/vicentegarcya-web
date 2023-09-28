@@ -299,7 +299,7 @@ function Home({ isLoading }) {
           >
             <p>
               Creative <span>web developer</span> and designer crafting digital
-              experiences for <span>heart-driven people & brands</span>. I
+              experiences for heart-driven people & brands. I
               believe in the power of <span>building together</span> ☺︎
             </p>
           </div>
