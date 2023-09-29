@@ -28,6 +28,14 @@ function Bitacora() {
           <p>[05] Masculinidad</p>
           <img alt="arrow" src={arrowLink}></img>
         </Link>
+        <Link className="post" to={"/bitacora/6"}>
+          <p>[06] Perros Verdes</p>
+          <img alt="arrow" src={arrowLink}></img>
+        </Link>
+        <Link className="post" to={"/bitacora/7"}>
+          <p>[07] Pedir Ayuda</p>
+          <img alt="arrow" src={arrowLink}></img>
+        </Link>
       </section>
       <BackHome />
     </div>

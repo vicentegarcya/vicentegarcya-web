@@ -1,39 +1,37 @@
 @font-face {
   font-family: "Neue-Montreal-Medium";
-  src: url("./fonts/NeueMontreal/PPNeueMontreal-Medium.otf");
+  src: url(../public/fonts/NeueMontreal/ppneuemontreal-medium-webfont.woff)
+    format("woff");
 }
 
 @font-face {
   font-family: "Neue-Montreal-Bold";
-  src: url("./fonts/NeueMontreal/PPNeueMontreal-Bold.otf");
+  src: url(../public/fonts/NeueMontreal/ppneuemontreal-bold-webfont.woff)
+    format("woff");
 }
 
 @font-face {
   font-family: "Neue-Montreal-Book";
-  src: url("./fonts/NeueMontreal/PPNeueMontreal-Book.otf");
+  src: url(../public/fonts/NeueMontreal/ppneuemontreal-book-webfont.woff)
+    format("woff");
 }
 
 @font-face {
   font-family: "Neue-Montreal-Regular";
-  src: url("./fonts/NeueMontreal/NeueMontreal-Regular.otf");
+  src: url(../public/fonts/NeueMontreal/neuemontreal-regular-webfont.woff)
+    format("woff");
 }
 
 @font-face {
-  font-family: "Editorial-New-Light";
-  src: local("Editorial-New-Light"),
-    url("./fonts/EditorialNew/PPEditorialNew-Ultralight.otf") format("opentype");
+  font-family: Editorial-New-Light;
+  src: url(../public/fonts/EditorialNew/ppeditorialnew-ultralight-webfont.woff)
+    format("woff");
 }
 
 @font-face {
-  font-family: "Editorial-New-Regular";
-  src: local("Editorial-New-Reg"),
-    url("./fonts/EditorialNew/PPEditorialNew-Regular.otf") format("opentype");
-}
-
-@font-face {
-  font-family: "Editorial-New-Italic";
-  src: local("Editorial-New-Italic"),
-    url("./fonts/EditorialNew/PPEditorialNew-Italic.otf") format("opentype");
+  font-family: Editorial-New-Italic;
+  src: url(../public/fonts/EditorialNew/ppeditorialnew-ultralightitalic-webfont.woff)
+    format("woff");
 }
 
 * {
@@ -63,6 +61,10 @@ body {
   overflow-x: hidden;
   background-color: var(--main-white);
   letter-spacing: -0.02em;
+}
+
+html {
+  overscroll-behavior: none;
 }
 
 body::-webkit-scrollbar {
