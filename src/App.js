@@ -11,7 +11,7 @@ import Post6 from "./posts/Post6";
 import Post7 from "./posts/Post7";
 import Header from "./components/Header/Header";
 import { useEffect, useState } from "react";
-import ScrollToHashElement from './components/ScrollToHashElement';
+import ScrollToHash from './components/ScrollToHash';
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -22,8 +22,8 @@ function App() {
 
   return (
     <div className="App">
+      <ScrollToHash />
       <Header isLoading={isLoading}></Header>
-      <ScrollToHashElement></ScrollToHashElement>
       <Routes>
         <Route path="/" element={<Home isLoading={isLoading} />} />
         <Route path="/bitacora" element={<Bitacora />} />
