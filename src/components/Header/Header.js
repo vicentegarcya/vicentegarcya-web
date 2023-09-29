@@ -30,13 +30,13 @@ export default function Header({ isLoading }) {
             <Link onClick={() => setIsUnfolded(!isUnfolded)} to={"/"}>
               Home
             </Link>
-            <Link onClick={() => setIsUnfolded(!isUnfolded)} to={"/"}>
+            <Link onClick={() => setIsUnfolded(!isUnfolded)} to={"/#about"}>
               About
             </Link>
-            <Link onClick={() => setIsUnfolded(!isUnfolded)} to={"/"}>
+            <Link onClick={() => setIsUnfolded(!isUnfolded)} to={"/#projects"}>
               Projects
             </Link>
-            <Link onClick={() => setIsUnfolded(!isUnfolded)} to={"/"}>
+            <Link onClick={() => setIsUnfolded(!isUnfolded)} to={"/#services"}>
               Services
             </Link>
             <Link onClick={() => setIsUnfolded(!isUnfolded)} to={"/bitacora"}>

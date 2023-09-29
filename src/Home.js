@@ -403,7 +403,7 @@ function Home({ isLoading }) {
           </div>
         </div>
       </section>
-      <section ref={aboutSection} className="about">
+      <section ref={aboutSection} id="about" className="about">
         <SectionTitle
           title={
             <p>
@@ -482,7 +482,7 @@ function Home({ isLoading }) {
           </div>
         </div>
       </section>
-      <section ref={projectsSection} className="projects">
+      <section ref={projectsSection} id="projects" className="projects">
         <SectionTitle
           title={
             <p>
@@ -701,7 +701,7 @@ function Home({ isLoading }) {
           </div>
         </div>
       </section>
-      <section ref={servicesSection} className="services">
+      <section ref={servicesSection} id="services" className="services">
         <SectionTitle
           title={
             <p>
