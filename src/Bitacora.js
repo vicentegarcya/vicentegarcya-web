@@ -36,6 +36,10 @@ function Bitacora() {
           <p>[07] Pedir Ayuda</p>
           <img alt="arrow" src={arrowLink}></img>
         </Link>
+        <Link className="post" to={"/bitacora/8"}>
+          <p>[08] Recuperación</p>
+          <img alt="arrow" src={arrowLink}></img>
+        </Link>
       </section>
       <BackHome />
     </div>

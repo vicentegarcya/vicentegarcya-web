@@ -9,6 +9,7 @@ import Post4 from "./posts/Post4";
 import Post5 from "./posts/Post5";
 import Post6 from "./posts/Post6";
 import Post7 from "./posts/Post7";
+import Post8 from "./posts/Post8";
 import Header from "./components/Header/Header";
 import { useEffect, useState } from "react";
 import ScrollToHash from './components/ScrollToHash';
@@ -34,6 +35,7 @@ function App() {
         <Route path="/bitacora/5" element={<Post5 />} />
         <Route path="/bitacora/6" element={<Post6 />} />
         <Route path="/bitacora/7" element={<Post7 />} />
+        <Route path="/bitacora/8" element={<Post8 />} />
       </Routes>
     </div>
   );
