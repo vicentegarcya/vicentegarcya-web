@@ -40,6 +40,10 @@ function Bitacora() {
           <p>[08] Recuperación</p>
           <img alt="arrow" src={arrowLink}></img>
         </Link>
+        <Link className="post" to={"/bitacora/9"}>
+          <p>[09] Ser (+) Valiente</p>
+          <img alt="arrow" src={arrowLink}></img>
+        </Link>
       </section>
       <BackHome />
     </div>
