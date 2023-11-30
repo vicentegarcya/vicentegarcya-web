@@ -1357,3 +1357,48 @@
     background-color: var(--main-highlight-color);
   }
 }
+
+
+@media only screen and (min-width: 1281px) {
+  .welcome_content_left {
+    width: 40%;
+  }
+
+  .welcome_content_left > p {
+    font-size: 2vw;
+  }
+
+  .welcome_content_left p > span:after {
+    bottom: 0.35vw;
+  }
+
+  .welcome_content_right_links > div > p {
+    font-size: 2vw;
+  }
+
+  .about_text {
+    font-size: 2vw;
+  }
+
+  .method_right > p {
+    font-size: 2vw;
+  }
+
+  .words > p {
+    font-size: 5vw;
+  }
+
+  .services_main .packages > div > p {
+    font-size: 1.45vw;
+    width: 15vw;
+  }
+
+  .services_main .packages > div > div {
+    width: 18vw;
+  }
+
+  .services_main .packages a {
+    width: 15vw;
+    font-size: 1.45vw;
+  }
+}

@@ -154,3 +154,10 @@
     font-size: 20px;
   }
 }
+
+
+@media only screen and (min-width: 1281px) {
+  .footer_bottom {
+    font-size: 23vw;
+  }
+}
