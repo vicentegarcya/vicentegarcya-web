@@ -32,7 +32,9 @@ function Post10() {
   return (
     <div className="postPage">
       <ProgressBar progress={scrollTop} />
-      <h1 className="title">Protagonista</h1>
+      <h1 className="title">
+        {window.innerWidth < 786 ? "Protago-nista" : "Protagonista"}
+      </h1>
       <section progress={scrollTop} className={"content"}>
         <p>
           La primera vez que lloré en terapia fue cuando mi psicóloga me dijo
