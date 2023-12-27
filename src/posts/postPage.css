@@ -1,7 +1,7 @@
 /* POST PAGE */
 .postPage {
   font-family: 'Neue-Montreal-Regular';
-  margin-left: 1.5rem;
+  margin-left: 3.5rem;
 }
 
 .postPage .title {
@@ -43,6 +43,10 @@
 }
 
 @media only screen and (max-width: 768px) {
+  .postPage {
+    margin-left: 2.5rem;
+  }
+
   .postPage .title {
     font-size: 70px;
     position: fixed;

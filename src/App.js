@@ -12,9 +12,11 @@ import Post7 from "./posts/Post7";
 import Post8 from "./posts/Post8";
 import Post9 from "./posts/Post9";
 import Post10 from "./posts/Post10";
+import Post11 from "./posts/Post11";
 import Header from "./components/Header/Header";
 import { useEffect, useState } from "react";
 import ScrollToHash from './components/ScrollToHash';
+
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -40,6 +42,7 @@ function App() {
         <Route path="/bitacora/8" element={<Post8 />} />
         <Route path="/bitacora/9" element={<Post9 />} />
         <Route path="/bitacora/10" element={<Post10 />} />
+        <Route path="/bitacora/11" element={<Post11 />} />
       </Routes>
     </div>
   );
